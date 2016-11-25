@@ -41,10 +41,12 @@
         <p class="item-custom__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form class="item-custom__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="item-custom__set">
+            <legend>Тип</legend>
             <label><input type="radio" name="item-type" value="accessory" checked> Аксессуар для интерьера</label>
             <label><input type="radio" name="item-type" value="toy"> Детская игрушка</label>
           </fieldset>
           <fieldset class="item-custom__set">
+            <legend>Цвет</legend>
             <label><input type="checkbox" name="item-color" value="white" checked> Белый</label>
             <label><input type="checkbox" name="item-color" value="gray" checked> Серый</label>
             <label><input type="checkbox" name="item-color" value="tiffany"> &laquo;Тиффани&raquo;</label>
@@ -53,21 +55,25 @@
             <label><input type="checkbox" name="item-color" value="orange"> Оранжевый</label>
           </fieldset>
           <fieldset class="item-custom__set">
+            <legend>ФИО</legend>
             <label>Имя: <input type="text" name="buyer-name" placeholder="Введите ваше имя*" required></label>
             <label>Фамилия: <input type="text" name="buyer-surname" placeholder="Укажите фамилию*" required></label>
             <label>Отчество: <input type="text" name="buyer-midname" placeholder="Отчество, если желаете"></label>
           </fieldset>
           <fieldset class="item-custom__set">
+            <legend>ТЕЛ</legend>
             <label><input type="tel" name="buyer-tel" placeholder="+7 ХХХ ХХ ХХ*" required></label>
           </fieldset>
           <fieldset class="item-custom__set">
+            <legend>E-MAIL</legend>
             <label><input type="email" name="buyer-email" placeholder="Ваш Email*" required></label>
           </fieldset>
           <fieldset class="item-custom__set">
+            <legend>ДОП</legend>
             <textarea name="buyer-extra" cols="30" rows="10">Опишите все ваши пожелания к заказу</textarea>
           </fieldset>
           <span class="item-custom__note">*Поля обязательны для заполнения</span>
-          <button type="submit">Отправить заказ</button>
+          <button class="btn btn--submit" type="submit">Отправить заказ</button>
         </form>
       </section>
 
