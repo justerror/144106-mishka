@@ -73,25 +73,11 @@
 
       </section>
 
-<!--     * Модальное окно * -->
-      <section class="item-modal">
-        <h1 class="item-modal__title">Добавить в корзину</h1>
-        <span class="item-modal__text">Выберите размер:</span>
-        <form class="item-modal__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="item-modal__sizes">
-            <label><input type="radio" name="item-size" value="S" checked> S</label>
-            <label><input type="radio" name="item-size" value="M"> M</label>
-            <label><input type="radio" name="item-size" value="L"> L</label>
-          </fieldset>
-          <button class="btn btn--submit" type="submit">Добавить</button>
-        </form>
-      </section>
-
 <!--     * Секция о нас с отзывами клиентов * -->
       <section class="about">
-        <h1 class="about__title">Коротко о нас:</h1>
+        <h2 class="about__title">Коротко о нас:</h2>
 
-        <article class="advantages">
+        <div class="advantages">
           <ul class="advantages__list">
             <li class="advantages__item">Экологически чистые материалы</li>
             <li class="advantages__item">Скандинавский стиль по российской цене</li>
@@ -100,7 +86,7 @@
             <li class="advantages__item">Поддержка отечественного производителя</li>
             <li class="advantages__item">Поставляется в подарочной упаковке</li>
           </ul>
-        </article>
+        </div>
 
         <article class="review">
           <h1 class="review__title">Отзывы</h1>
@@ -121,11 +107,11 @@
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
         <address class="contacts__address">
-              <div>
+              <div class="contacts__row">
                 <span>e-mail:</td>
                 <a class="link link--mail" href="mailto:info@mimimishkashop.ru" title="Напишите нам!">info@mimimishkashop.ru</a>
               </div>
-              <div>
+              <div class="contacts__row">
                 <span>адрес:</span>
                 <p>г. Санкт-Петербург,
                     ул. Большая Конюшенная,
@@ -163,6 +149,20 @@
       </section>
 
     </footer>
+
+<!--     * Модальное окно * -->
+    <section class="item-modal">
+      <h2 class="item-modal__title">Добавить в корзину</h2>
+      <span class="item-modal__text">Выберите размер:</span>
+      <form class="item-modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="item-modal__sizes">
+          <label><input type="radio" name="item-size" value="S" checked> S</label>
+          <label><input type="radio" name="item-size" value="M"> M</label>
+          <label><input type="radio" name="item-size" value="L"> L</label>
+        </fieldset>
+        <button class="btn btn--submit" type="submit">Добавить</button>
+      </form>
+    </section>
 
   </body>
 </html>

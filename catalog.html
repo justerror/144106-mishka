@@ -40,9 +40,9 @@
       <section class="catalog">
 
         <article class="item">
-          <a class="item__link" href="#">
-            <h1 class="item__title">Зайчик-попрыгайчик</h1>
-          </a>
+          <h1 class="item__title">
+            <a class="item__link" href="#">Зайчик-попрыгайчик</a>
+          </h1>
           <a class="item__link" href="#">
             <img class="item__img" src="http://placehold.it/260x195" alt="Фото предмета">
           </a>
@@ -54,9 +54,9 @@
         </article>
 
         <article class="item">
-          <a class="item__link" href="#">
-            <h1 class="item__title">Корзинка для белья</h1>
-          </a>
+          <h1 class="item__title">
+            <a class="item__link" href="#">Корзинка для белья</a>
+          </h1>
           <a class="item__link" href="#">
             <img class="item__img" src="http://placehold.it/260x195" alt="Фото предмета">
           </a>
@@ -68,8 +68,9 @@
         </article>
 
         <article class="item">
-          <a class="item__link" href="#">
-            <h1 class="item__title">Большая корзинка для игрушек</h1>
+          <h1 class="item__title">
+            <a class="item__link" href="#">Большая корзинка для игрушек</a>
+          </h1>
           </a>
           <a class="item__link" href="#">
             <img class="item__img" src="http://placehold.it/260x195" alt="Фото предмета">
@@ -88,20 +89,6 @@
           <a class="btn" href="#">Сделать заказ</a>
         </article>
 
-      </section>
-
-<!--     * Модальное окно * -->
-      <section class="item-modal">
-        <h3 class="item-modal__title">Добавить в корзину</h3>
-        <span class="item-modal__text">Выберите размер:</span>
-        <form class="item-modal__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="item-modal__sizes">
-            <label><input type="radio" name="item-size" value="S" checked> S</label>
-            <label><input type="radio" name="item-size" value="M"> M</label>
-            <label><input type="radio" name="item-size" value="L"> L</label>
-          </fieldset>
-          <button class="btn btn--submit" type="submit">Добавить</button>
-        </form>
       </section>
 
     </main>
@@ -128,6 +115,20 @@
       </section>
 
     </footer>
+
+<!--     * Модальное окно * -->
+    <section class="item-modal">
+      <h2 class="item-modal__title">Добавить в корзину</h2>
+      <span class="item-modal__text">Выберите размер:</span>
+      <form class="item-modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="item-modal__sizes">
+          <label><input type="radio" name="item-size" value="S" checked> S</label>
+          <label><input type="radio" name="item-size" value="M"> M</label>
+          <label><input type="radio" name="item-size" value="L"> L</label>
+        </fieldset>
+        <button class="btn btn--submit" type="submit">Добавить</button>
+      </form>
+    </section>
 
   </body>
 </html>
