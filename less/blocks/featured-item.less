@@ -1,0 +1,25 @@
+.featured-item {
+  .font(15px, 24px, normal);
+}
+
+.featured-item__title {
+  .font(25px, 30px, bold, @head-color);
+}
+
+.featured-item__date {
+  .font(17px, 16px, bold, @sub-color);
+  .uppercased();
+}
+
+.featured-item__table {
+  .full-width();
+  tr {
+    border-bottom: 1px solid #ececec;
+  }
+}
+
+.featured-item__price {
+  display: block;
+  text-align: center;
+  .font(17px, 24px, bold, #444);
+}
