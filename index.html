@@ -9,28 +9,31 @@
 
     <header class="page-header">
       <div class="page-header__container">
+
         <a class="page-header__logo">
           <img src="img/logo-mobile.svg" alt="Логотип MISHKA" width="87" height="35">
         </a>
 
         <nav class="main-menu">
-          <a class="main-menu__btn" href="#">
-            <img src="img/icon-menu-open.svg" alt="" width="20" height="14">
-          </a>
-          <ul class="main-menu__list">
-            <li class="main-menu__item">
-              <a href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="main-menu__item">
-              <a href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="main-menu__item">
-              <a href="#">Поиск по сайту</a>
-            </li>
-            <li class="main-menu__item">
-              <a href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
+          <div class="main-menu__container">
+            <a class="main-menu__btn" href="#">
+              <img src="img/icon-menu-open.svg" alt="" width="20" height="14">
+            </a>
+            <ul class="main-menu__list">
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="form.html">Вязание на заказ</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Поиск по сайту</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </div>
         </nav>
 
         <h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
@@ -49,9 +52,8 @@
     </header>
 
     <main class="page-content">
-
       <div class="page-content__container">
-  <!--     * Секция для лучшего товара * -->
+
         <section class="featured">
           <div class="featured__container">
             <article class="featured-item">
@@ -79,7 +81,6 @@
           </div>
         </section>
 
-  <!--     * Секция о нас с отзывами клиентов * -->
         <section class="about">
           <div class="about__container">
 
@@ -109,9 +110,9 @@
               <a class="btn" href="#">Написать</a>
             </article>
           </div>
+
         </section>
 
-  <!--     * Секция конктактов магазина * -->
         <section class="contacts">
           <div class="contacts__container">
             <h2 class="contacts__title">Контакты</h2>
@@ -133,38 +134,38 @@
 
         <div class="map">
           <div class="map__container">
+            <img src="img/map-mobile@1x.jpg" alt="">
           </div>
         </div>
 
         <a class="btn" href="#">Напишите нам</a>
-</div>
 
+      </div>
     </main>
 
     <footer class="page-footer">
+      <div class="page-footer__container">
 
-<!--     * Секция для социальных кнопок * -->
-      <div class="social">
-        <div class="social__container">
-          <a class="social__link social__link--ig" href="#">Инстаграмм</a>
-          <a class="social__link social__link--fb" href="#">Фейсбук</a>
-          <a class="social__link social__link--tw" href="#">Твиттер</a>
+        <div class="social">
+          <div class="social__container">
+            <a class="social__link social__link--ig" href="#">Инстаграмм</a>
+            <a class="social__link social__link--fb" href="#">Фейсбук</a>
+            <a class="social__link social__link--tw" href="#">Твиттер</a>
+          </div>
         </div>
-      </div>
 
-<!--     * Секция для копирайта * -->
-      <div class="copyright">
-        <div class="copyright__container">
-          <a class="copyright__link" href="https://htmlacademy.ru/" title="Перейти на сайт htmlacademy.ru">
-            <span class="copyright__text">Разработано</span>
-            <img class="copyright__img" src="http://placehold.it/50x50" alt="HTML Academy">
-          </a>
+        <div class="copyright">
+          <div class="copyright__container">
+            <a class="copyright__link" href="https://htmlacademy.ru/" title="Перейти на сайт htmlacademy.ru">
+              <span class="copyright__text">Разработано</span>
+              <img class="copyright__img" src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+            </a>
+          </div>
         </div>
-      </div>
 
+      </div>
     </footer>
 
-<!--     * Модальное окно * -->
     <section class="item-modal">
       <div class="item-modal__container">
         <h2 class="item-modal__title">Добавить в корзину</h2>

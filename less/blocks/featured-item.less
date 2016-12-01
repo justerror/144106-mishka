@@ -8,18 +8,21 @@
 
 .featured-item__date {
   .font(17px, 16px, bold, @sub-color);
-  .uppercased();
+
+  text-transform: uppercase;
 }
 
 .featured-item__table {
-  .full-width();
+  width: 100%;
+
   tr {
     border-bottom: 1px solid #ececec;
   }
 }
 
 .featured-item__price {
+  .font(17px, 24px, bold, #444);
+
   display: block;
   text-align: center;
-  .font(17px, 24px, bold, #444);
 }

@@ -1,8 +1,16 @@
 .btn {
   .inline-block();
-  .full-width();
   .font(17px, 16px, bold);
   .bordered(@base-color, 2px);
+
+  width: 100%;
   padding: 16px 0;
   text-align: center;
+  text-transform: uppercase;
+
+  &--submit {
+    color: @alt-color;
+    background-color: @sub-color;
+    border: none;
+  }
 }

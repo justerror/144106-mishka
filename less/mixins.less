@@ -2,8 +2,11 @@
   display: inline-block;
   vertical-align: top;
 }
-.full-width() {
-  width: 100%;
+
+.mobile-container() {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 .centered() {
@@ -20,10 +23,6 @@
 
 .outlined(@_color: red) {
   outline: 1px dashed @_color;
-}
-
-.uppercased() {
-  text-transform: uppercase;
 }
 
 .font(@font-size: inherit, @line-height: inherit, @font-weight: inherit, @color: inherit) {
