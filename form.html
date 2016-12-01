@@ -3,98 +3,114 @@
   <head>
     <meta charset="utf-8">
     <title>Мишка - Заказ</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="page-header">
+      <div class="page-header__container page-header__container--form">
 
-      <a class="page-header__logo" href="index.html">
-        <img class="" src="http://placehold.it/100x40" alt="Логотип MISHKA">
-      </a>
+        <a class="page-header__logo" href="index.html">
+          <img src="img/logo-mobile.svg" alt="Логотип MISHKA" width="87" height="35">
+        </a>
 
-      <nav class="main-menu">
-        <a class="main-menu__btn" href="#"></a>
-        <ul class="main-menu__list">
-          <li class="main-menu__item">
-            <a href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="#">Поиск по сайту</a>
-          </li>
-          <li class="main-menu__item">
-            <a href="#">Корзина: пока пуста</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="main-menu">
+          <div class="main-menu__container">
+            <a class="main-menu__btn" href="#">
+              <img src="img/icon-menu-open.svg" alt="" width="20" height="14">
+            </a>
+            <ul class="main-menu__list">
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="form.html">Вязание на заказ</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Поиск по сайту</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-      <h1 class="page-header__title">Вязание на заказ</h1>
+        <h1 class="page-header__title">Вязание на заказ</h1>
 
+      </div>
     </header>
 
+
     <main class="page-content">
+      <div class="page-content__container">
 
-      <section class="item-custom">
-        <p class="item-custom__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <form class="item-custom__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="item-custom__set">
-            <legend>Тип</legend>
-            <label><input type="radio" name="item-type" value="accessory" checked> Аксессуар для интерьера</label>
-            <label><input type="radio" name="item-type" value="toy"> Детская игрушка</label>
-          </fieldset>
-          <fieldset class="item-custom__set">
-            <legend>Цвет</legend>
-            <label><input type="checkbox" name="item-color" value="white" checked> Белый</label>
-            <label><input type="checkbox" name="item-color" value="gray" checked> Серый</label>
-            <label><input type="checkbox" name="item-color" value="tiffany"> &laquo;Тиффани&raquo;</label>
-            <label><input type="checkbox" name="item-color" value="black"> Черный</label>
-            <label><input type="checkbox" name="item-color" value="pink"> Розовый</label>
-            <label><input type="checkbox" name="item-color" value="orange"> Оранжевый</label>
-          </fieldset>
-          <fieldset class="item-custom__set">
-            <legend>ФИО</legend>
-            <label>Имя: <input type="text" name="buyer-name" placeholder="Введите ваше имя*" required></label>
-            <label>Фамилия: <input type="text" name="buyer-surname" placeholder="Укажите фамилию*" required></label>
-            <label>Отчество: <input type="text" name="buyer-midname" placeholder="Отчество, если желаете"></label>
-          </fieldset>
-          <fieldset class="item-custom__set">
-            <legend>ТЕЛ</legend>
-            <label><input type="tel" name="buyer-tel" placeholder="+7 ХХХ ХХ ХХ*" required></label>
-          </fieldset>
-          <fieldset class="item-custom__set">
-            <legend>E-MAIL</legend>
-            <label><input type="email" name="buyer-email" placeholder="Ваш Email*" required></label>
-          </fieldset>
-          <fieldset class="item-custom__set">
-            <legend>ДОП</legend>
-            <textarea name="buyer-extra" cols="30" rows="10">Опишите все ваши пожелания к заказу</textarea>
-          </fieldset>
-          <span class="item-custom__note">*Поля обязательны для заполнения</span>
-          <button class="btn btn--submit" type="submit">Отправить заказ</button>
-        </form>
-      </section>
+        <section class="item-custom">
+          <div class="item-custom__container">
+            <p class="item-custom__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+            <form class="item-custom__form" action="https://echo.htmlacademy.ru" method="post">
+              <fieldset class="item-custom__set">
+                <legend>Тип</legend>
+                <label><input class="item-custom__input" type="radio" name="item-type" value="accessory" checked> Аксессуар для интерьера</label>
+                <label><input class="item-custom__input" type="radio" name="item-type" value="toy"> Детская игрушка</label>
+              </fieldset>
+              <fieldset class="item-custom__set">
+                <legend>Цвет</legend>
+                <label><input class="item-custom__input" type="checkbox" name="item-color" value="white" checked> Белый</label>
+                <label><input class="item-custom__input" type="checkbox" name="item-color" value="gray" checked> Серый</label>
+                <label><input class="item-custom__input" type="checkbox" name="item-color" value="tiffany"> &laquo;Тиффани&raquo;</label>
+                <label><input class="item-custom__input" type="checkbox" name="item-color" value="black"> Черный</label>
+                <label><input class="item-custom__input" type="checkbox" name="item-color" value="pink"> Розовый</label>
+                <label><input class="item-custom__input" type="checkbox" name="item-color" value="orange"> Оранжевый</label>
+              </fieldset>
+              <fieldset class="item-custom__set">
+                <legend>ФИО</legend>
+                <label>Имя: <input class="item-custom__input" type="text" name="buyer-name" placeholder="Введите ваше имя*" required></label>
+                <label>Фамилия: <input class="item-custom__input" type="text" name="buyer-surname" placeholder="Укажите фамилию*" required></label>
+                <label>Отчество: <input class="item-custom__input" type="text" name="buyer-midname" placeholder="Отчество, если желаете"></label>
+              </fieldset>
+              <fieldset class="item-custom__set">
+                <legend>ТЕЛ</legend>
+                <label><input class="item-custom__input" type="tel" name="buyer-tel" placeholder="+7 ХХХ ХХ ХХ*" required></label>
+              </fieldset>
+              <fieldset class="item-custom__set">
+                <legend>E-MAIL</legend>
+                <label><input class="item-custom__input" type="email" name="buyer-email" placeholder="Ваш Email*" required></label>
+              </fieldset>
+              <fieldset class="item-custom__set">
+                <legend>ДОП</legend>
+                <textarea name="buyer-extra" rows="10">Опишите все ваши пожелания к заказу</textarea>
+              </fieldset>
+              <span class="item-custom__note">*Поля обязательны для заполнения</span>
+              <button class="btn btn--submit" type="submit">Отправить заказ</button>
+            </form>
+          </div>
+        </section>
 
+      </div>
     </main>
 
     <footer class="page-footer">
+      <div class="page-footer__container">
 
-<!--     * Секция для социальных кнопок * -->
-      <div class="social">
-        <a class="social__link social__link--ig" href="#">Инстаграмм</a>
-        <a class="social__link social__link--fb" href="#">Фейсбук</a>
-        <a class="social__link social__link--tw" href="#">Твиттер</a>
+        <div class="social">
+          <div class="social__container">
+            <a class="social__link social__link--ig" href="#">Инстаграмм</a>
+            <a class="social__link social__link--fb" href="#">Фейсбук</a>
+            <a class="social__link social__link--tw" href="#">Твиттер</a>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <div class="copyright__container">
+            <a class="copyright__link" href="https://htmlacademy.ru/" title="Перейти на сайт htmlacademy.ru">
+              <span class="copyright__text">Разработано</span>
+              <img class="copyright__img" src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+            </a>
+          </div>
+        </div>
+
       </div>
-
-<!--     * Секция для копирайта * -->
-      <div class="copyright">
-        <span class="copyright__text">Разработано</span>
-        <a class="copyright__link" href="https://htmlacademy.ru/" title="Перейти на сайт htmlacademy.ru">
-          <img class="copyright__img" src="http://placehold.it/50x50" alt="HTML Academy">
-        </a>
-      </div>
-
     </footer>
 
   </body>

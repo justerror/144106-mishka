@@ -1,0 +1,37 @@
+.inline-block() {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.mobile-container() {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.centered() {
+  margin: 0 auto;
+}
+
+.mobile-width() {
+  width: 320px;
+}
+
+.mobile-padding() {
+  padding: 0 30px;
+}
+
+.outlined(@_color: red) {
+  outline: 1px dashed @_color;
+}
+
+.font(@font-size: inherit, @line-height: inherit, @font-weight: inherit, @color: inherit) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+  color: @color;
+}
+
+.bordered(@border-color: #000, @border-width: 1px, @border-style: solid) {
+  border: @border-width @border-color @border-style;
+}
