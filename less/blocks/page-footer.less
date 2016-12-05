@@ -1,4 +1,28 @@
 .page-footer__container {
-  .mobile-width();
-  .centered();
+  .container();
+
+  background-color: @bg-color;
+
+  @media @tablet-widths {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+  flex-basis: 25%;
+
+  @media @tablet-widths {
+    display: block;
+  }
+}
+
+.page-footer__social {
+  flex-basis: 50%;
+}
+
+.page-footer__copyright {
+  flex-basis: 25%;
 }

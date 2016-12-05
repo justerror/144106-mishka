@@ -1,3 +1,30 @@
 .contacts__container {
-  .mobile-container();
+  .container();
+
+  padding-top: 30px;
+}
+
+.contacts__title {
+  margin-bottom: 30px;
+}
+
+.contacts__address {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+
+  @media @tablet-widths {
+    flex-direction: row;
+  }
+}
+
+.contacts__row {
+  display: flex;
+  flex-basis: 50%;
+  margin-bottom: 30px;
+}
+
+.contacts__row :first-child {
+  flex-basis: 25%;
+  flex-shrink: 0;
 }

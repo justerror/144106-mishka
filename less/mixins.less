@@ -3,10 +3,18 @@
   vertical-align: top;
 }
 
-.mobile-container() {
+.container() {
   width: 320px;
   margin: 0 auto;
-  padding: 0 30px;
+
+  @media @tablet-widths {
+    width: 768px;
+    padding: inherit 0;
+  }
+
+  @media @desktop-widths {
+    width: 1150px;
+  }
 }
 
 .centered() {
