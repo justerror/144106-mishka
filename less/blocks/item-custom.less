@@ -1,11 +1,145 @@
 .item-custom__container {
   .container();
+
+  padding-top: 23px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .item-custom__text {
   .font(13px, 24px, normal, @base-color);
+
+  margin-bottom: 23px;
 }
 
 .item-custom__input {
-  display: block;
+  display: none;
+}
+
+.item-custom__set {
+  display: flex;
+  position: relative;
+  padding: 0;
+  border: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1000;
+    top: 8px;
+    right: 0;
+    left: 62px;
+    height: 1px;
+    background-color: @sub-color;
+  }
+}
+
+.item-custom__legend {
+  .font(17px, 16px, bold, @sub-color);
+  margin-bottom: 28px;
+  padding-right: 18px;
+  background-color: @alt-color;
+  text-transform: uppercase;
+}
+
+.item-custom__label {
+  .font(17px, 18px, bold, @head-color);
+
+  display: flex;
+  position: relative;
+  margin-bottom: 42px;
+  padding-left: 62px;
+  cursor: pointer;
+}
+
+.item-custom__label::before {
+  .font(17px, 18px, bold, @sub-color);
+  .bordered(@base-color, 2px);
+
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.item-custom__input:checked + .item-custom__label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  width: 17px;
+  height: 17px;
+  background-color: @sub-color;
+  border-radius: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.item-custom__label--checkbox::before {
+  border-radius: 0;
+}
+
+.item-custom__input:checked + .item-custom__label--checkbox::after {
+  background-color: transparent;
+  border-radius: 0;
+  top: 2px;
+  left: 10px;
+  width: 20px;
+  height: 10px;
+  border-left: 2px solid @head-color;
+  border-bottom: 2px solid @head-color;
+  transform: rotate(-45deg);
+}
+
+.item-custom__input2 {
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid @head-color;
+}
+
+.item-custom__textarea {
+  .bordered(@head-color, 2px);
+
+  width: 100%;
+}
+
+.item-custom__note {
+  .font(14px, 16px, normal, @base-color);
+}
+
+.item-custom__btn {
+  .font(17px, 16px, bold, @base-color);
+
+  background-color: @alt-color;
+}
+
+.item-custom__label2 {
+  .font(17px, 18px, bold, @head-color);
+
+  margin-bottom: 12px;
+}
+
+.item-custom__input2 {
+  margin-bottom: 17px;
+}
+
+.item-custom__set--fio {
+  margin-bottom: 16px;
+}
+
+.item-custom__legend--tel {
+  margin-bottom: 3px;
+}
+
+.item-custom__set--tel {
+  margin-bottom: 15px;
+}
+
+.item-custom__legend--email {
+  margin-bottom: 15px;
 }

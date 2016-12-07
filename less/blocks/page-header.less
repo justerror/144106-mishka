@@ -2,8 +2,7 @@
   .container();
 
   position: relative;
-  overflow: hidden;
-  background: url('../img/hero-mobile@1x.jpg') no-repeat 50% 80px;
+  background: url('../img/hero-mobile@1x.jpg') no-repeat 50% 61px;
 
   &--catalog {
     background: @bg-color;
@@ -15,7 +14,7 @@
 
 .page-header__logo-link {
   display: block;
-  padding: 20px 0;
+  padding: 19px 0;
   text-align: center;
   background-color: @alt-color;
   border-top: 1px solid #ececec;
@@ -25,6 +24,19 @@
 .page-header__title {
   .font(27px, 30px, bold, @head2-color);
 
-  padding: 75px 30px 120px 30px;
+  padding: 70px 30px 122px 30px;
   text-align: center;
+
+  &--catalog,
+  &--form {
+    padding-bottom: 76px;
+  }
+
+  @media @tablet-widths {
+    .font(43px, 50px, bold, @head-color);
+  }
+
+  @media @desktop-widths {
+    .font(53px, 57px, bold, @head-color);
+  }
 }

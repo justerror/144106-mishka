@@ -5,42 +5,82 @@
 .item-featured__container {
   .container();
 
-  padding-top: 30px;
-}
+  position: relative;
+  padding-top: 27px;
+  padding-right: 30px;
+  padding-left: 30px;
 
-.item-featured__inner {
   @media @tablet-widths {
-    display: flex;
+    padding-top: 50px;
+  }
+
+  @media @desktop-widths {
+    margin-top: 50px;
+    padding-left: 175px;
   }
 }
 
-.item-featured__inner-2 {
+.item-featured__inner {
+  position: relative;
   display: flex;
   flex-direction: column;
-  flex: 0 0 50%;
+
+  @media @tablet-widths {
+    width: 50%;
+    padding-right: 44px;
+  }
+
+  @media @desktop-widths {
+    flex-basis: 292px;
+  }
 }
 
 .item-featured__title {
   .font(25px, 30px, bold, @head-color);
 
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+
+  @media @tablet-widths {
+    .font(43px, 50px, bold, @head-color);
+
+    margin-bottom: 50px;
+  }
 }
 
 .item-featured__date {
   .font(17px, 16px, bold, @sub-color);
 
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   text-transform: uppercase;
+
+  @media @tablet-widths {
+    position: absolute;
+    max-width: 130px;
+    top: 55px;
+    right: 0;
+    text-align: center;
+  }
+
+  @media @desktop-widths {
+    left: 0;
+  }
 }
 
 .item-featured__descr {
-  margin-bottom: 30px;
+  .font(15px, 24px, normal, @base-color);
+  margin-bottom: 16px;
+
+  @media @tablet-widths {
+    .font(17px, 30px, normal, @base-color);
+  }
 }
 
 .item-featured__table {
+  .font(15px, 20px, normal, @base-color);
+
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 
   tr {
     border-bottom: 1px solid #ececec;
@@ -49,28 +89,54 @@
   td {
     padding: 10px 0;
   }
+
+  td:first-child {
+    padding-right: 15px;
+  }
 }
 
 .item-featured__img {
   width: 100%;
   height: auto;
-  margin-bottom: 30px;
-  order: 1;
+  margin-bottom: 18px;
 
   @media @tablet-widths {
-    order: 4;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+  }
+
+  @media @desktop-widths {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
   }
 }
 
 .item-featured__price {
-  .font(17px, 24px, bold, #444);
+  .font(17px, 24px, bold, @base-color);
 
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
   text-align: center;
-  order: 2;
+
+  @media @tablet-widths {
+    .font(20px, 24px, bold, @base-color);
+  }
 }
 
 .item-featured__btn {
-  order: 3;
+  @media @tablet-widths {
+    margin-bottom: 0;
+  }
+
+  @media @desktop-widths {
+    margin-bottom: 0;
+  }
 }

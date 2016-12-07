@@ -1,7 +1,9 @@
 .reviews__container {
   .container();
 
-  padding-top: 30px;
+  padding-top: 22px;
+  padding-right: 30px;
+  padding-left: 30px;
 
   @media @tablet-widths {
     display: flex;
@@ -12,42 +14,49 @@
 .reviews__title {
   .font(25px, 30px, bold, @head-color);
 
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   order: -2;
   flex-basis: 75%;
+
+  @media @tablet-widths {
+    .font(43px, 50px, bold, @head-color);
+  }
 }
 
 .reviews__text {
   .font(15px, 30px, normal, @base-color);
 
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 .reviews__author {
   .font(18px, 24px, bold, @head-color);
 
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   font-style: normal;
   flex-basis: 75%;
 }
 
 .reviews__author-tag {
   .font(18px, 30px, normal, @head-color);
+
   display: block;
+  margin-top: 3px;
   font-weight: normal;
 }
 
 .reviews__control {
   display: flex;
   flex-basis: 25%;
+  margin-bottom: 9px;
 }
 
 .reviews__btn {
   font-size: 0;
   flex-basis: 50%;
 
-  .bordered(@base-color);
+  .bordered(#ececec);
 
   &--prev {
     background: url(../img/icon-left-arrow.svg) no-repeat 50%;
@@ -65,5 +74,9 @@
 .reviews__write {
   order: -1;
   flex-basis: 25%;
+  margin-bottom: 30px;
 }
 
+.reviews__write-btn {
+  .font(18px, 16px, bold, @base-color);
+}
