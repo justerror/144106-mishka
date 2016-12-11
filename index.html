@@ -11,38 +11,37 @@
     <header class="page-header">
       <div class="page-header__container">
 
-        <a class="page-header__logo-link">
-          <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип MISHKA" width="87" height="35">
-        </a>
+        <div class="page-header__inner">
+          <a class="page-header__logo-wrap">
+            <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип MISHKA" width="87" height="35">
+          </a>
 
-        <nav class="main-menu">
-          <div class="main-menu__container">
-            <input class="main-menu__toggle" id="main-menu__toggle" type="checkbox">
-            <label class="main-menu__hamburger" for="main-menu__toggle"></label>
-            <ul class="main-menu__list">
-              <li class="main-menu__item">
-                <a class="main-menu__link" href="catalog.html">Каталог товаров</a>
+          <ul class="page-header__menu page-header__menu--nav">
+            <li class="page-header__menu-item">
+              <a class="page-header__menu-link page-header__menu-link--nav" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="page-header__menu-item">
+              <a class="page-header__menu-link page-header__menu-link--nav" href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="page-header__menu page-header__menu--user">
+            <li class="page-header__menu-item page-header__menu-item--user page-header__menu-item--search">
+                <a class="page-header__menu-link page-header__menu-link--search" href="#">Поиск по сайту</a>
               </li>
-              <li class="main-menu__item">
-                <a class="main-menu__link" href="form.html">Вязание на заказ</a>
+              <li class="page-header__menu-item page-header__menu-item--user page-header__menu-item--cart">
+                <a class="page-header__menu-link page-header__menu-link--cart" href="#">Корзина: пока пуста</a>
               </li>
-              <li class="main-menu__item main-menu__item--search">
-                <a class="main-menu__link main-menu__link--search" href="#">Поиск по сайту</a>
-              </li>
-              <li class="main-menu__item main-menu__item--cart">
-                <a class="main-menu__link" href="#">Корзина: пока пуста</a>
-              </li>
-<!--
-              <li class="main-menu__item">
-                <a class="main-menu__link" href="#">Новые поступления</a>
-              </li>
-              <li class="main-menu__item">
-                <a class="main-menu__link" href="#">Распродажа</a>
-              </li>
--->
-            </ul>
-          </div>
-        </nav>
+          </ul>
+          <ul class="page-header__menu page-header__menu--extra">
+            <li class="page-header__menu-item">
+              <a class="page-header__menu-link page-header__menu-link--extra" href="#">Новые поступления</a>
+            </li>
+            <li class="page-header__menu-item">
+              <a class="page-header__menu-link page-header__menu-link--extra " href="#">Распродажа</a>
+            </li>
+          </ul>
+          <span class="page-header__notify">Бесплатная доставка по России</span>
+        </div>
 
         <h1 class="page-header__title">Милые штуки<br> ручной<br> работы для дома</h1>
 
@@ -106,7 +105,7 @@
         <section class="reviews">
           <div class="reviews__container">
             <h2 class="reviews__title">Отзывы</h2>
-            <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             <cite class="reviews__author">
               Анастасия Красильникова
               <span class="reviews__author-tag">&#64;misssssiskras</span>
@@ -152,7 +151,7 @@
       <div class="page-footer__container">
 
         <div class="page-footer__logo">
-          <img src="../img/logo-mobile.svg" alt="">
+          <img src="img/logo-mobile.svg" alt="">
         </div>
 
         <div class="social page-footer__social">

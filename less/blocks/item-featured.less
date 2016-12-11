@@ -12,11 +12,14 @@
 
   @media @tablet-widths {
     padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
   @media @desktop-widths {
-    margin-top: 50px;
-    padding-left: 175px;
+    margin-top: 67px;
+    padding-top: 60px;
+    padding-left: 225px;
   }
 }
 
@@ -24,6 +27,10 @@
   .heading();
 
   margin-bottom: 8px;
+
+  @media @tablet-widths {
+    margin-bottom: 48px;
+  }
 }
 
 .item-featured__date {
@@ -36,13 +43,14 @@
   @media @tablet-widths {
     position: absolute;
     max-width: 130px;
-    top: 55px;
-    right: 0;
+    top: 61px;
+    right: 50px;
     text-align: center;
   }
 
   @media @desktop-widths {
-    left: 0;
+    top: 76px;
+    left: 67px;
   }
 }
 
@@ -59,15 +67,23 @@
   @media @desktop-widths {
     position: static;
     width: 292px;
+    padding-right: 0;
   }
 }
 
 .item-featured__descr {
   .font(15px, 24px, normal, @base-color);
+
   margin-bottom: 16px;
 
   @media @tablet-widths {
     .font(17px, 30px, normal, @base-color);
+
+    margin-bottom: 33px;
+  }
+
+  @media @desktop-widths {
+    margin-bottom: 48px;
   }
 }
 
@@ -76,6 +92,14 @@
 
   width: 100%;
   margin-bottom: 26px;
+
+  @media @tablet-widths {
+    margin-bottom: 55px;
+  }
+
+  @media @desktop-widths {
+    margin-bottom: 108px;
+  }
 
   tr {
     border-bottom: 1px solid #ececec;
@@ -87,17 +111,22 @@
 
   td:first-child {
     padding-right: 15px;
+
+    @media @tablet-widths {
+      padding-right: 0px;
+    }
   }
 }
 
 .item-featured__img {
   width: 100%;
   height: auto;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 
   @media @tablet-widths {
     position: absolute;
     height: 100%;
+    padding-top: 8px;
     top: 0;
     right: -100%;
     bottom: 0;
@@ -111,6 +140,7 @@
     bottom: 0;
     width: 50%;
     height: 100%;
+    padding-right: 50px;
   }
 }
 
@@ -123,6 +153,8 @@
 
   @media @tablet-widths {
     .font(20px, 24px, bold, @base-color);
+
+    margin-bottom: 34px;
   }
 }
 

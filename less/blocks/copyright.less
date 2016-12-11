@@ -8,9 +8,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 21px 0 23px 0;
+  padding: 23px 0;
+
+  @media @tablet-widths {
+    justify-content: flex-end;
+  }
 }
 
 .copyright__link :nth-child(n) {
   margin: 0 14px;
+
+  @media @tablet-widths {
+    margin: 0;
+
+    &:first-child {
+      margin-right: 30px;
+    }
+  }
 }

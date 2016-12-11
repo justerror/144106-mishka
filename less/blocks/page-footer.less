@@ -14,22 +14,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 }
 
 .page-footer__logo {
   display: none;
-  flex-basis: 25%;
 
   @media @tablet-widths {
     display: block;
+    width: 28%;
   }
 }
 
 .page-footer__social {
-  flex-basis: 50%;
+  @media @tablet-widths {
+    width: 44%;
+  }
 }
 
 .page-footer__copyright {
-  flex-basis: 25%;
+  @media @tablet-widths {
+    width: 28%;
+  }
 }
