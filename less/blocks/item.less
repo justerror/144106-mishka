@@ -1,21 +1,67 @@
+.item {
+  flex-basis: 35%;
+
+  &--extra {
+
+  }
+}
+
 .item__container {
   .container();
 
+  position: relative;
   padding-top: 30px;
   padding-right: 30px;
   padding-left: 30px;
 
+  @media @tablet-widths {
+    display: flex;
 
+    &--extra {
+    flex-direction: column;
+    padding-top: 0;
+    padding-left: 680px;
+    }
+  }
+
+  @media @desktop-widths {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .item__inner {
   .bordered(#ededed);
 
+  flex: 1;
   padding: 27px 30px;
 
   &--extra {
     padding-top: 20px;
     padding-bottom: 0;
+
+  }
+
+  @media @tablet-widths {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    min-height: 335px;
+
+    &--extra {
+      width: 100%;
+      display: block;
+      min-height: auto;
+      border-top: none;
+    }
+  }
+
+  @media @desktop-widths {
+    width: 100%;
+    min-height: 0;
+    border-top: 1px solid #ededed;
   }
 }
 
@@ -40,6 +86,23 @@
       width: 32px;
       height: 32px;
       background: url(../img/icon-video.svg) no-repeat center;
+
+      @media @desktop-widths {
+        position: static;
+        display: block;
+      }
+    }
+  }
+
+  @media @tablet-widths {
+    border-bottom: none;
+  }
+
+  @media @desktop-widths {
+    border: none;
+
+    &--extra {
+      padding: 0;
     }
   }
 }
@@ -54,6 +117,18 @@
     padding-right: 15px;
     line-height: 24px;
   }
+
+  @media @tablet-widths {
+    margin-bottom: auto;
+
+    &--extra {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media @desktop-widths {
+    margin-bottom: 10px;
+  }
 }
 
 .item__control {
@@ -65,8 +140,38 @@
   .font(15px, 24px, bold, @head-color);
 }
 
-.item__img {
+.item__img-wrap {
   display: block;
+
+  @media @tablet-widths {
+    width: 50%;
+  }
+
+  @media @desktop-widths {
+    display: block;
+    height: 462px;
+    width: 100%;
+  }
+}
+
+.item__img,
+.item__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.item__video {
+  margin-bottom: 0;
+  order: -1;
+
+  @media @desktop-widths {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    width: 650px;
+  }
 }
 
 .item__link--basket {
@@ -77,11 +182,6 @@
   background: url(../img/icon-cart.svg) no-repeat center ;
 }
 
-.item__video {
-  background: red;
-  margin-bottom: 0;
-}
-
 .item__btn {
-  margin-bottom: 0;
+  margin-bottom: 33px;
 }

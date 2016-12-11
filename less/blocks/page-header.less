@@ -19,10 +19,16 @@
   background-color: @alt-color;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
+
+  @media @tablet-widths {
+    position: absolute;
+    left: 0;
+    border: none;
+  }
 }
 
 .page-header__title {
-  .font(27px, 30px, bold, @head2-color);
+  .heading();
 
   padding: 70px 30px 122px 30px;
   text-align: center;
@@ -32,11 +38,4 @@
     padding-bottom: 76px;
   }
 
-  @media @tablet-widths {
-    .font(43px, 50px, bold, @head-color);
-  }
-
-  @media @desktop-widths {
-    .font(53px, 57px, bold, @head-color);
-  }
 }

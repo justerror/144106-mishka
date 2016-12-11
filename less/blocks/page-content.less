@@ -1,13 +1,14 @@
 .page-content__container {
   .container();
+
+  @media @desktop-widths {
+
+  }
 }
 
-.page-content__btn-wrap {
-  margin-bottom: 9px;
-  padding-right: 30px;
-  padding-left: 30px;
-}
-
-.page-content__btn {
-  .font(18px, 16px, bold, @base-color);
+.page-content__inner {
+  @media @desktop-widths {
+    display: flex;
+    justify-content: space-between;
+  }
 }

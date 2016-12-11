@@ -1,6 +1,11 @@
 .main-menu__list {
   display: none;
   background-color: @alt-color;
+
+  @media @tablet-widths {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .main-menu__item {
@@ -29,6 +34,14 @@
     transform: translateY(-50%);
     opacity: 0.2;
   }
+
+    @media @tablet-widths {
+      border-left: 1px solid #ececec;
+
+      &--abs {
+      display: none;
+      }
+      }
 }
 
 .main-menu__link {
@@ -46,6 +59,18 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media @tablet-widths {
+    border: none;
+
+    &--search {
+    font-size: 0;
+    width: 84px;
+    height: 100%;
+    }
+  }
+
+
 }
 
 .main-menu__toggle {
@@ -60,6 +85,10 @@
   height: 20px;
   background: url(../img/icon-menu-open.svg) no-repeat 50%;
   cursor: pointer;
+
+  @media @tablet-widths {
+    display: none;
+  }
 }
 
 .main-menu__toggle:checked ~ .main-menu__list {
