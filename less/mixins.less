@@ -4,16 +4,16 @@
 }
 
 .container() {
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
 
   @media @tablet-widths {
-    width: 768px;
-    padding: inherit 0;
+    min-width: 768px;
+//    padding: inherit 0;
   }
 
   @media @desktop-widths {
-    width: 1150px;
+    max-width: 1150px;
   }
 }
 

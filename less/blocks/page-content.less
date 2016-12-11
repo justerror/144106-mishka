@@ -1,14 +1,23 @@
-.page-content__container {
+.page-content__container--catalog {
   .container();
 
-  @media @desktop-widths {
+  position: relative;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
 
+  @media @tablet-widths {
+    padding-top: 80px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
-}
 
-.page-content__inner {
   @media @desktop-widths {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+
   }
+
 }
+

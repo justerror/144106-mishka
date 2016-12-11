@@ -1,14 +1,17 @@
 .page-footer {
+  background-color: @bg-color;
+
   &--catalog {
-    margin-top: 60px;
+    margin-top: 57px;
+
+    @media @tablet-widths {
+      margin-top: 63px;
+    }
   }
 }
 
 .page-footer__container {
   .container();
-
-
-  background-color: @bg-color;
 
   @media @tablet-widths {
     display: flex;

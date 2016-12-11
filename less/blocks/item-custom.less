@@ -1,45 +1,106 @@
 .item-custom__container {
-  .container();
-
   padding-top: 23px;
-  padding-right: 30px;
-  padding-left: 30px;
+//  padding-right: 30px;
+//  padding-left: 30px;
+//
+//  @media @tablet-widths {
+//    padding-right: 50px;
+//    padding-left: 50px;
+//  }
 }
 
 .item-custom__text {
   .font(13px, 24px, normal, @base-color);
+  .container();
 
   margin-bottom: 23px;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @media @tablet-widths {
+    font-size: 17px;
+    line-height: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
 }
 
-.item-custom__input {
-  display: none;
+.item-custom__form {
+  display: flex;
+  flex-direction: column;
 }
 
 .item-custom__set {
   display: flex;
   position: relative;
   padding: 0;
+  padding-right: 30px;
+  padding-left: 30px;
   border: none;
 
-  &::after {
+  @media @tablet-widths {
+    padding-right: 50px;
+    padding-left: 50px;
+
+    &--bg {
+      background-color: #f1f1f1;
+    }
+  }
+
+    &::after {
     content: '';
     position: absolute;
     z-index: -1000;
     top: 8px;
-    right: 0;
+    right: 30px;
     left: 62px;
     height: 1px;
     background-color: @sub-color;
+
+    @media @tablet-widths {
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+.item-custom__inner {
+  .container();
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+
+  @media @tablet-widths {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 217px;
+
+    &--row {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 }
 
 .item-custom__legend {
   .font(17px, 16px, bold, @sub-color);
+
+  align-self: flex-start;
   margin-bottom: 28px;
   padding-right: 18px;
   background-color: @alt-color;
   text-transform: uppercase;
+
+  @media @tablet-widths {
+    position: absolute;
+    left: 0;
+    background-color: transparent;
+  }
 }
 
 .item-custom__label {
@@ -50,6 +111,12 @@
   margin-bottom: 42px;
   padding-left: 62px;
   cursor: pointer;
+
+  @media @tablet-widths {
+    &--checkbox {
+      width: 50%;
+    }
+  }
 }
 
 .item-custom__label::before {
@@ -59,7 +126,7 @@
   content: '';
   position: absolute;
   top: 50%;
-  left: 0px;
+  left: 0;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -94,52 +161,108 @@
   transform: rotate(-45deg);
 }
 
+.item-custom__input-wrap {
+    @media @tablet-widths {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .item-custom__input2 {
   width: 100%;
+  margin-bottom: 17px;
   padding: 10px 0;
   border: 0;
   outline: 0;
   border-bottom: 2px solid @head-color;
 }
 
+.item-custom__label2 {
+  .font(17px, 18px, bold, @head-color);
+
+  margin-bottom: 12px;
+
+  @media @tablet-widths {
+    margin-right: 25px;
+
+    &--empty {
+      margin-right: 0;
+    }
+  }
+}
+
 .item-custom__textarea {
   .bordered(@head-color, 2px);
+  outline: 0;
+  padding: 0;
+  margin: 0;
 
-  width: 100%;
+//  width: 100%;
+  @media @tablet-widths {
+
+  }
+}
+
+.item-custom__btn-wrap {
+//  padding-right: 30px;
+//  padding-left: 30px;
+  .container();
+  flex: 1;
+
+
+  @media @tablet-widths {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+//    padding-right: 50px;
+  }
+
+  @media @desktop-widths {
+    padding-left: 217px;
+  }
 }
 
 .item-custom__note {
   .font(14px, 16px, normal, @base-color);
+
+  display: block;
+
+  @media @tablet-widths {
+    order: 1;
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
+
 
 .item-custom__btn {
   .font(17px, 16px, bold, @base-color);
 
   background-color: @alt-color;
+
+  @media @tablet-widths {
+
+    width: 230px;
+  }
 }
 
-.item-custom__label2 {
-  .font(17px, 18px, bold, @head-color);
 
-  margin-bottom: 12px;
-}
+//.item-custom__set--fio {
+//  margin-bottom: 16px;
+//}
+//
+//.item-custom__legend--tel {
+//  margin-bottom: 3px;
+//}
+//
+//.item-custom__set--tel {
+//  margin-bottom: 15px;
+//}
+//
+//.item-custom__legend--email {
+//  margin-bottom: 15px;
+//}
 
-.item-custom__input2 {
-  margin-bottom: 17px;
-}
-
-.item-custom__set--fio {
-  margin-bottom: 16px;
-}
-
-.item-custom__legend--tel {
-  margin-bottom: 3px;
-}
-
-.item-custom__set--tel {
-  margin-bottom: 15px;
-}
-
-.item-custom__legend--email {
-  margin-bottom: 15px;
+.item-custom__input {
+  display: none;
 }

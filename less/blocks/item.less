@@ -1,66 +1,50 @@
 .item {
-  flex-basis: 35%;
+  margin-bottom: 31px;
 
-  &--extra {
+  @media @tablet-widths {
+    margin-bottom: 54px;
+  }
 
+  @media @desktop-widths {
+    width: 315px;
   }
 }
 
 .item__container {
-  .container();
+//  .container();
 
   position: relative;
-  padding-top: 30px;
-  padding-right: 30px;
-  padding-left: 30px;
+//  padding-top: 30px;
+//  padding-right: 30px;
+//  padding-left: 30px;
 
   @media @tablet-widths {
     display: flex;
+//    padding-right: 50px;
+//    padding-left: 50px;
   }
 
   @media @desktop-widths {
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-
-    &--extra {
-    flex-direction: column;
-    padding-top: 0;
-    padding-left: 680px;
-    }
+      flex-direction: column;
   }
 }
 
 .item__inner {
   .bordered(#ededed);
 
-  flex: 1;
   padding: 27px 30px;
-
-  &--extra {
-    padding-top: 20px;
-    padding-bottom: 0;
-
-  }
 
   @media @tablet-widths {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
-    min-height: 335px;
-
-    &--extra {
-      width: 100%;
-      display: block;
-      min-height: auto;
-      border-top: none;
-    }
   }
 
   @media @desktop-widths {
+    justify-content: flex-start;
+    flex-basis: 197px;
     width: 100%;
-    min-height: 0;
     border-top: 1px solid #ededed;
   }
 }
@@ -71,40 +55,13 @@
   position: relative;
   margin-bottom: 5px;
 
-  &--extra {
-    .bordered(#ececec);
-
-    margin-bottom: 0;
-    padding: 23px 0 25px 89px;
-
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 30px;
-      left: 33px;
-      width: 32px;
-      height: 32px;
-      background: url(../img/icon-video.svg) no-repeat center;
-
-      @media @desktop-widths {
-        position: static;
-        display: block;
-      }
-
-    }
-  }
-
   @media @tablet-widths {
+    font-size: 20px;
     border-bottom: none;
   }
 
   @media @desktop-widths {
     border: none;
-
-    &--extra {
-      padding: 0;
-    }
   }
 }
 
@@ -113,22 +70,13 @@
 
   margin-bottom: 19px;
 
-  &--extra {
-    margin-bottom: 25px;
-    padding-right: 15px;
-    line-height: 24px;
-  }
-
   @media @tablet-widths {
     margin-bottom: auto;
-
-    &--extra {
-      margin-bottom: 30px;
-    }
+    font-size: 15px;
   }
 
   @media @desktop-widths {
-    margin-bottom: 10px;
+    margin-bottom: auto;
   }
 }
 
@@ -139,6 +87,10 @@
 
 .item__price {
   .font(15px, 24px, bold, @head-color);
+
+  @media @tablet-widths {
+    font-size: 17px;
+  }
 }
 
 .item__img-wrap {
@@ -146,6 +98,7 @@
 
   @media @tablet-widths {
     width: 50%;
+    min-height: 334px;
   }
 
   @media @desktop-widths {
@@ -183,6 +136,3 @@
   background: url(../img/icon-cart.svg) no-repeat center ;
 }
 
-.item__btn {
-  margin-bottom: 33px;
-}
