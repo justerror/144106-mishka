@@ -1,0 +1,166 @@
+.item-featured {
+  .font(15px, 24px, normal);
+}
+
+.item-featured__container {
+  .container();
+  width: 100%;
+
+  position: relative;
+  padding-top: 27px;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @media @tablet-widths {
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @media @desktop-widths {
+    margin-top: 67px;
+    padding-top: 60px;
+    padding-left: 225px;
+  }
+}
+
+.item-featured__title {
+  .heading();
+
+  margin-bottom: 8px;
+
+  @media @tablet-widths {
+    margin-bottom: 48px;
+  }
+}
+
+.item-featured__date {
+  .font(17px, 16px, bold, @sub-color);
+
+  display: block;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+
+  @media @tablet-widths {
+    position: absolute;
+    max-width: 130px;
+    top: 61px;
+    right: 50px;
+    text-align: center;
+  }
+
+  @media @desktop-widths {
+    top: 76px;
+    left: 67px;
+  }
+}
+
+.item-featured__inner {
+  display: flex;
+  flex-direction: column;
+
+  @media @tablet-widths {
+    position: relative;
+    width: 50%;
+    padding-right: 44px;
+  }
+
+  @media @desktop-widths {
+    position: static;
+    width: 292px;
+    padding-right: 0;
+  }
+}
+
+.item-featured__descr {
+  .font(15px, 24px, normal, @base-color);
+
+  margin-bottom: 16px;
+
+  @media @tablet-widths {
+    .font(17px, 30px, normal, @base-color);
+
+    margin-bottom: 33px;
+  }
+
+  @media @desktop-widths {
+    margin-bottom: 48px;
+  }
+}
+
+.item-featured__table {
+  .font(15px, 20px, normal, @base-color);
+
+  width: 100%;
+  margin-bottom: 26px;
+
+  @media @tablet-widths {
+    margin-bottom: 55px;
+  }
+
+  @media @desktop-widths {
+    margin-bottom: 108px;
+  }
+
+  tr {
+    border-bottom: 1px solid #ececec;
+  }
+
+  td {
+    padding: 10px 0;
+  }
+
+  td:first-child {
+    padding-right: 15px;
+
+    @media @tablet-widths {
+      padding-right: 0px;
+    }
+  }
+}
+
+.item-featured__img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+
+  @media @tablet-widths {
+    position: absolute;
+    height: 100%;
+    padding-top: 8px;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+  }
+
+  @media @desktop-widths {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    padding-right: 50px;
+  }
+}
+
+.item-featured__price {
+  .font(17px, 24px, bold, @base-color);
+
+  display: block;
+  margin-bottom: 26px;
+  text-align: center;
+
+  @media @tablet-widths {
+    .font(20px, 24px, bold, @base-color);
+
+    margin-bottom: 34px;
+  }
+}
+
+.item-featured__btn {
+  @media @tablet-widths {
+    margin-bottom: 0;
+  }
+}

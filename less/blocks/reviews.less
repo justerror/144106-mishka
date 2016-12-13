@@ -1,0 +1,127 @@
+.reviews {
+  @media @tablet-widths {
+    margin-top: 19px;
+  }
+
+  @media @desktop-widths {
+    margin-top: 26px;
+  }
+}
+
+.reviews__container {
+  .container();
+
+  position: relative;
+  padding-top: 22px;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @media @tablet-widths {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 79px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @media @desktop-widths {
+    padding-right: 50px;
+    padding-bottom: 78px;
+    padding-left: 225px;
+  }
+}
+
+.reviews__title {
+  .heading();
+
+  margin-bottom: 24px;
+  order: -2;
+//  flex-basis: 74%;
+
+  @media @desktop-widths {
+    position: relative;
+    top: -9px;
+  }
+}
+
+.reviews__text {
+  .font(15px, 30px, normal, @base-color);
+
+  margin-bottom: 26px;
+
+  @media @tablet-widths {
+    .font(17px, 30px, normal, @base-color);
+
+    margin-top: -15px;
+    margin-bottom: 57px;
+  }
+
+  @media @desktop-widths {
+    margin-bottom: 39px;
+    padding-right: 80px;
+  }
+}
+
+.reviews__author {
+  .font(18px, 24px, bold, @head-color);
+
+  display: block;
+  margin-bottom: 31px;
+  font-style: normal;
+  flex-basis: 75%;
+
+  @media @tablet-widths {
+    font-size: 17px;
+    margin-bottom: 47px;
+  }
+}
+
+.reviews__author-tag {
+  .font(18px, 30px, normal, @head-color);
+
+  display: block;
+  margin-top: 3px;
+
+  @media @tablet-widths {
+    font-size: 17px;
+  }
+}
+
+.reviews__control {
+  display: flex;
+  flex-basis: 25%;
+  margin-bottom: 9px;
+}
+
+.reviews__btn {
+  font-size: 0;
+  flex-basis: 50%;
+
+  .bordered(#ececec);
+
+  &--prev {
+    background: url(../img/icon-left-arrow.svg) no-repeat 50%;
+  }
+  &--next {
+    background: url(../img/icon-right-arrow.svg) no-repeat 50%;
+    border-left: none;
+  }
+
+  @media @tablet-widths {
+    border: none;
+  }
+}
+
+.reviews__write {
+  order: -1;
+  min-width: 175px;
+  margin-bottom: 30px;
+}
+
+.reviews__write-btn {
+  .font(18px, 16px, bold, @base-color);
+  @media @tablet-widths {
+    font-size: 17px;
+  }
+}

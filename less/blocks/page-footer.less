@@ -1,4 +1,44 @@
+.page-footer {
+  background-color: @bg-color;
+
+  &--catalog {
+    margin-top: 57px;
+
+    @media @tablet-widths {
+      margin-top: 63px;
+    }
+  }
+}
+
 .page-footer__container {
-  .mobile-width();
-  .centered();
+  .container();
+
+  @media @tablet-widths {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+
+  @media @tablet-widths {
+    display: block;
+    width: 28%;
+  }
+}
+
+.page-footer__social {
+  @media @tablet-widths {
+    width: 44%;
+  }
+}
+
+.page-footer__copyright {
+  @media @tablet-widths {
+    width: 28%;
+  }
 }

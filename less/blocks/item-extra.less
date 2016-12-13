@@ -1,0 +1,124 @@
+.item-extra {
+  width: 100%;
+}
+
+.item-extra__container {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  @media @tablet-widths {
+  }
+
+  @media @desktop-widths {
+    padding-left: 681px;
+  }
+}
+
+.item-extra__title {
+  .font(17px, 24px, bold, @head-color);
+  .bordered(#ececec);
+
+  position: relative;
+  padding: 23px 0 23px 90px;
+  border-bottom: none;
+
+  &::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    background: url(../img/icon-video.svg) no-repeat center;
+
+    @media @tablet-widths {
+      top: 56%;
+      left: 40px;
+    }
+    @media @desktop-widths {
+      position: static;
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+  @media @tablet-widths {
+    font-size: 20px;
+    padding-top: 37px;
+    padding-left: 105px;
+  }
+
+  @media @desktop-widths {
+    padding-top: 58px;
+    padding-right: 58px;
+    padding-left: 80px;
+  }
+}
+
+.item-extra__video-wrap {
+  background-color: #62d1ba;
+
+  @media @tablet-widths {
+    order: -1;
+    min-height: 455px;
+  }
+
+  @media @desktop-widths {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 681px;
+    min-height: auto;
+  }
+}
+
+.item-extra__descr {
+  .font(13px, 24px, normal, @base-color);
+  .bordered(#ececec);
+
+  padding-top: 22px;
+  padding-right: 42px;
+  padding-bottom: 25px;
+  padding-left: 33px;
+  border-top: none;
+  border-bottom: none;
+
+  @media @tablet-widths {
+    font-size: 15px;
+    line-height: 30px;
+    padding-top: 10px;
+    padding-bottom: 34px;
+    padding-left: 40px;
+  }
+
+  @media @desktop-widths {
+    padding-right: 58px;
+    padding-left: 80px;
+  }
+}
+
+.item-extra__btn-wrap {
+  .bordered(#ececec);
+
+  padding: 0 33px 33px 33px;
+  border-top: none;
+
+  @media @tablet-widths {
+    padding: 0 41px 45px 41px;
+  }
+
+  @media @desktop-widths {
+    padding-top: 12px;
+    padding-right: 57px;
+    padding-bottom: 58px;
+    padding-left: 80px;
+  }
+}
+
+.item-extra__btn {
+  margin-bottom: 0;
+}

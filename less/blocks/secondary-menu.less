@@ -1,15 +1,23 @@
 .secondary-menu__list {
-  .mobile-width();
+  @media @tablet-widths {
+    display: flex;
+    padding: 0 50px;
+  }
 }
 
 .secondary-menu__item {
   position: relative;
-  padding: 18px 0;
+
   &--left {
-    background-color: #63d1bb;
+    background: #63d1bb url(../img/icon-interior.svg) no-repeat 87% 50%;
   }
+
   &--right {
-    background-color: #56c3b2;
+    background: #56c3b2 url(../img/icon-toy.svg) no-repeat 90% 50%;
+  }
+
+  @media @tablet-widths {
+    flex-basis: 50%;
   }
 }
 
@@ -17,5 +25,11 @@
   .font(19px, 24px, bold, @alt-color);
 
   display: block;
-  padding: 10px 160px 10px 30px;
+  padding: 25px 160px 30px 30px;
+
+  @media @tablet-widths {
+    .font(20px, 30px, bold, @alt-color);
+
+    width: 50%;
+  }
 }

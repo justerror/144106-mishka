@@ -1,29 +1,21 @@
 .page-header__container {
-  .mobile-width();
-  .centered();
-
   position: relative;
-  overflow: hidden;
-  background: url('../img/hero-mobile@1x.jpg') no-repeat 50% 80px;
-  &--catalog {
-    background: @bg-color;
-  }
-  &--form {
-    background: @bg-color;
-  }
+  min-width: 320px;
 }
 
-.page-header__logo {
-  display: block;
-  padding: 20px 0;
-  text-align: center;
-  background-color: @alt-color;
-  border-bottom: 1px solid #ececec;
-}
+.page-header__toggle {
+  position: absolute;
+  z-index: 1000;
+  top: 28px;
+  right: 30px;
+  width: 22px;
+  height: 22px;
+  background: url(../img/icon-menu-close.svg) no-repeat;
+  border: none;
+  outline: none;
+  cursor: pointer;
 
-.page-header__title {
-  .font(27px, 30px, bold, @head2-color);
-
-  padding: 75px 30px 120px 30px;
-  text-align: center;
+  @media @tablet-widths {
+    display: none;
+  }
 }

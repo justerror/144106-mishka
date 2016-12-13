@@ -1,7 +1,39 @@
 .social {
-  text-align: center;
+
 }
 
 .social__container {
-  .mobile-container();
+
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #e5e5e5;
+
+  @media @tablet-widths {
+    padding: 56px 10px;
+  }
+}
+
+.social__link {
+  width: 60px;
+  height: 30px;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  &--ig {
+    margin-left: -4px;
+    background-image: url(../img/icon-insta.svg);
+  }
+
+  &--fb {
+    background-image: url(../img/icon-fb.svg);
+  }
+
+  &--tw {
+    margin-left: -1px;
+    background-image: url(../img/icon-twitter.svg);
+  }
 }

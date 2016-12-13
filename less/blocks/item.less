@@ -1,27 +1,137 @@
+.item {
+  margin-bottom: 31px;
+
+  @media @tablet-widths {
+    margin-bottom: 54px;
+  }
+
+  @media @desktop-widths {
+    width: 315px;
+  }
+}
+
 .item__container {
-  .mobile-container();
+//  .container();
+
+  position: relative;
+//  padding-top: 30px;
+//  padding-right: 30px;
+//  padding-left: 30px;
+
+  @media @tablet-widths {
+    display: flex;
+//    padding-right: 50px;
+//    padding-left: 50px;
+  }
+
+  @media @desktop-widths {
+      flex-direction: column;
+  }
 }
 
 .item__inner {
-  padding: 0 30px;
+  .bordered(#ededed);
+
+  padding: 27px 30px;
+
+  @media @tablet-widths {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  @media @desktop-widths {
+    justify-content: flex-start;
+    flex-basis: 197px;
+    width: 100%;
+    border-top: 1px solid #ededed;
+  }
 }
 
 .item__title {
   .font(17px, 24px, bold, @head-color);
+
+  position: relative;
+  margin-bottom: 5px;
+
+  @media @tablet-widths {
+    font-size: 20px;
+    border-bottom: none;
+  }
+
+  @media @desktop-widths {
+    border: none;
+  }
 }
 
 .item__descr {
   .font(13px, 30px, normal, @base-color);
 
-  &--extra {
-    line-height: 24px;
+  margin-bottom: 19px;
+
+  @media @tablet-widths {
+    margin-bottom: auto;
+    font-size: 15px;
   }
+
+  @media @desktop-widths {
+    margin-bottom: auto;
+  }
+}
+
+.item__control {
+  padding-top: 20px;
+  border-top: 1px solid #ececec;
 }
 
 .item__price {
   .font(15px, 24px, bold, @head-color);
+
+  @media @tablet-widths {
+    font-size: 17px;
+  }
 }
 
-.item__img {
+.item__img-wrap {
   display: block;
+
+  @media @tablet-widths {
+    width: 50%;
+    min-height: 334px;
+  }
+
+  @media @desktop-widths {
+    display: block;
+    height: 462px;
+    width: 100%;
+  }
+}
+
+.item__img,
+.item__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.item__video {
+  margin-bottom: 0;
+  order: -1;
+
+  @media @desktop-widths {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    width: 650px;
+  }
+}
+
+.item__link--basket {
+  float: right;
+  width: 21px;
+  height: 21px;
+  font-size: 0;
+  background: url(../img/icon-cart.svg) no-repeat center ;
 }

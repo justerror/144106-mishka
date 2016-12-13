@@ -1,22 +1,226 @@
 .main-menu__container {
-  .mobile-container();
-}
-
-.main-menu__list {
-  display: none;
-}
-
-.main-menu__link {
+  .container();
   .font(17px, 24px, bold, @head-color);
 
-  width: 100%;
-  display: block;
-  padding: 30px 0;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 50px;
+  padding-left: 50px;
+
+  @media @df-mobile-widths {
+    padding-right: 0;
+    padding-left: 0;
+    flex-direction: column;
+  }
 }
 
-.main-menu__btn {
-  position: absolute;
-  top: 30px;
-  right: 30px;
+.main-menu__item {
+  position: relative;
+
+  flex-basis: 185px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  min-height: 89px;
+
+  display: flex;
+  align-items: center;
+
+  @media @df-tablet-widths {
+    &:nth-last-child(2) {
+      display: none;
+    }
+    &:nth-last-child(3) {
+      display: none;
+    }
+  }
+
+  @media @df-mobile-widths {
+    border-bottom: 1px solid #ececec;
+  }
+
+  &--bl {
+    border-left: 1px solid #ececec;
+
+    @media @df-mobile-widths {
+      border-left: none;
+    }
+  }
+
+  &:nth-child(n+6) {
+    font-size: 15px;
+    min-height: 55px;
+  }
+
+  &:nth-child(7) {
+    padding-left: 35px;
+  }
+
+  &--catalog {
+    flex-basis: 185px;
+
+    @media @df-tablet-widths {
+      order: 5;
+      flex-basis: 155px;
+
+      margin-right: 10px;
+      min-height: 55px;
+      font-size: 15px;
+    }
+
+    @media @df-mobile-widths {
+      order: -2;
+      flex-basis: 80px;
+
+      margin-right: 0;
+      padding-left: 35px;
+      line-height: auto;
+    }
+  }
+
+  &--custom {
+    flex-basis: 193px;
+    padding-left: 35px;
+
+    @media @df-tablet-widths {
+      order: 6;
+
+      min-height: 55px;
+      border-left: none;
+      font-size: 15px;
+    }
+
+    @media @df-mobile-widths {
+      order: -1;
+
+      flex-basis: 80px;
+      line-height: auto;
+    }
+  }
+
+  &--logo {
+    display: flex;
+    justify-content: center;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    @media @df-tablet-widths {
+      order: -10;
+      flex-basis: 52%;
+      justify-content: flex-start;
+
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    @media (max-width: 900px) {
+      flex-basis: 40%;
+    }
+
+    @media @df-mobile-widths {
+      justify-content: center;
+      flex-basis: 80px;
+      min-height: auto;
+      margin-right: 0;
+    }
+  }
+
+  &--search {
+    flex-basis: 83px;
+
+    padding-left: 83px;
+    font-size: 0;
+
+    @media @df-mobile-widths {
+      flex-basis: 80px;
+      min-height: auto;
+      font-size: inherit;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 33px;
+      width: 20px;
+      height: 20px;
+      background: url(../img/icon-search.svg) no-repeat 50%;
+      transform: translateY(-50%);
+      opacity: 0.2;
+
+      @media @df-mobile-widths {
+        left: 0;
+      }
+
+      @media @df-mobile-widths {
+        left: 30px;
+      }
+    }
+  }
+
+  &--cart {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 267px;
+
+    padding-left: 82px;
+
+
+    @media @df-tablet-widths {
+      flex-basis: 265px;
+    }
+
+    @media @df-mobile-widths {
+      flex-basis: 80px;
+      justify-content: flex-start;
+      min-height: auto;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      width: 20px;
+      height: 20px;
+      background: url(../img/icon-cart.svg) no-repeat 50%;
+      transform: translateY(-50%);
+      opacity: 0.2;
+
+      @media @df-mobile-widths {
+        left: 0;
+      }
+
+      @media @df-mobile-widths {
+        left: 30px;
+      }
+    }
+  }
+
+
+  &--note {
+    display: flex;
+    justify-content: flex-end;
+
+    flex-basis: 40%;
+
+    margin-left: auto;
+    font-weight: normal;
+
+    @media @df-tablet-widths {
+      order: 10;
+    }
+
+    @media @df-mobile-widths {
+      display: none;
+    }
+  }
+
+  &:not(&--logo) {
+    @media @df-mobile-widths {
+      padding-left: 76px;
+      font-size: 17px;
+      line-height: 24px;
+    }
+  }
 }

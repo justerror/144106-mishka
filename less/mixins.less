@@ -3,10 +3,18 @@
   vertical-align: top;
 }
 
-.mobile-container() {
-  width: 320px;
+.container() {
+  min-width: 320px;
   margin: 0 auto;
-  padding: 0 30px;
+
+  @media @tablet-widths {
+    min-width: 768px;
+//    padding: inherit 0;
+  }
+
+  @media @desktop-widths {
+    max-width: 1150px;
+  }
 }
 
 .centered() {
@@ -34,4 +42,22 @@
 
 .bordered(@border-color: #000, @border-width: 1px, @border-style: solid) {
   border: @border-width @border-color @border-style;
+}
+
+// Заголовки секций
+.heading {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: @head-color;
+
+  @media @tablet-widths {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media @desktop-widths {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
