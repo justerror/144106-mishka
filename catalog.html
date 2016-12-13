@@ -9,35 +9,29 @@
   <body>
 
     <header class="page-header">
-      <div class="page-header__container page-header__container--catalog">
+      <div class="page-header__container">
 
-        <a class="page-header__logo-link" href="index.html">
-          <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип MISHKA" width="87" height="35">
-        </a>
+        <button class="page-header__toggle" type="button"></button>
 
         <nav class="main-menu">
           <div class="main-menu__container">
-            <input class="main-menu__toggle" id="main-menu__toggle" type="checkbox">
-            <label class="main-menu__hamburger" for="main-menu__toggle"></label>
-            <ul class="main-menu__list">
-              <li class="main-menu__item">
-                <a class="main-menu__link" href="catalog.html">Каталог товаров</a>
-              </li>
-              <li class="main-menu__item">
-                <a class="main-menu__link" href="form.html">Вязание на заказ</a>
-              </li>
-              <li class="main-menu__item main-menu__item--search">
-                <a class="main-menu__link" href="#">Поиск по сайту</a>
-              </li>
-              <li class="main-menu__item main-menu__item--cart">
-                <a class="main-menu__link" href="#">Корзина: пока пуста</a>
-              </li>
-            </ul>
+            <a href="catalog.html" class="main-menu__item main-menu__item--catalog">Каталог товаров</a>
+            <a href="form.html" class="main-menu__item main-menu__item--custom main-menu__item--bl">Вязание на заказ</a>
+            <a href="index.html" class="main-menu__item main-menu__item--logo">
+              <img class="main-menu__logo" src="img/logo-mobile.svg" alt="Логотип MISHKA" width="87" height="35">
+            </a>
+            <a href="" class="main-menu__item main-menu__item--search main-menu__item--bl">Поиск по сайту</a>
+            <a href="" class="main-menu__item main-menu__item--cart main-menu__item--bl">Корзина: пока пуста</a>
+            <a href="" class="main-menu__item">Новые поступления</a>
+            <a href="" class="main-menu__item">Распродажа</a>       <a class="main-menu__item main-menu__item--note">Бесплатная доставка по России</a>
           </div>
         </nav>
 
-        <h1 class="page-header__title page-header__title--catalog">Каталог товаров</h1>
-
+        <div class="promo promo--nobg">
+          <div class="promo__container promo__container--nobg">
+            <h1 class="promo__title">Каталог товаров</h1>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -51,7 +45,7 @@
             </a>
             <div class="item__inner">
               <a class="item__link" href="#">
-                <h1 class="item__title">Зайчик-попрыгайчик</h1>
+                <h2 class="item__title">Зайчик-попрыгайчик</h2>
               </a>
               <p class="item__descr">Рост 30 см, вес 200 г</p>
               <div class="item__control">
@@ -69,7 +63,7 @@
             </a>
             <div class="item__inner">
               <a class="item__link" href="#">
-                <h1 class="item__title">Корзинка для белья</h1>
+                <h2 class="item__title">Корзинка для белья</h2>
               </a>
               <p class="item__descr">Диаметр 15 см, высота 10 см</p>
               <div class="item__control">
@@ -87,7 +81,7 @@
             </a>
             <div class="item__inner">
               <a class="item__link" href="#">
-                <h1 class="item__title">Большая корзинка для игрушек</h1>
+                <h2 class="item__title">Большая корзинка для игрушек</h2>
               </a>
               <p class="item__descr">Диаметр 30 см, высота 30 см</p>
               <div class="item__control">
@@ -100,7 +94,7 @@
 
         <article class="item-extra">
           <div class="item-extra__container">
-            <h1 class="item-extra__title">Процесс производства</h1>
+            <h2 class="item-extra__title">Процесс производства</h2>
             <div class="item-extra__video-wrap">
               <img class="item-extra__video" src="img/video-mobile@1x.jpg" alt="">
             </div>
@@ -118,7 +112,7 @@
       <div class="page-footer__container">
 
         <div class="page-footer__logo">
-          <img src="../img/logo-mobile.svg" alt="">
+          <img src="img/logo-mobile.svg" alt="">
         </div>
 
         <div class="social page-footer__social">

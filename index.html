@@ -11,39 +11,34 @@
     <header class="page-header">
       <div class="page-header__container">
 
-        <div class="page-header__inner">
-          <a class="page-header__logo-wrap">
-            <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип MISHKA" width="87" height="35">
-          </a>
+        <button class="page-header__toggle" type="button"></button>
 
-          <ul class="page-header__menu page-header__menu--nav">
-            <li class="page-header__menu-item">
-              <a class="page-header__menu-link page-header__menu-link--nav" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="page-header__menu-item">
-              <a class="page-header__menu-link page-header__menu-link--nav" href="form.html">Вязание на заказ</a>
-            </li>
-          </ul>
-          <ul class="page-header__menu page-header__menu--user">
-            <li class="page-header__menu-item page-header__menu-item--user page-header__menu-item--search">
-                <a class="page-header__menu-link page-header__menu-link--search" href="#">Поиск по сайту</a>
-              </li>
-              <li class="page-header__menu-item page-header__menu-item--user page-header__menu-item--cart">
-                <a class="page-header__menu-link page-header__menu-link--cart" href="#">Корзина: пока пуста</a>
-              </li>
-          </ul>
-          <ul class="page-header__menu page-header__menu--extra">
-            <li class="page-header__menu-item">
-              <a class="page-header__menu-link page-header__menu-link--extra" href="#">Новые поступления</a>
-            </li>
-            <li class="page-header__menu-item">
-              <a class="page-header__menu-link page-header__menu-link--extra " href="#">Распродажа</a>
-            </li>
-          </ul>
-          <span class="page-header__notify">Бесплатная доставка по России</span>
+        <nav class="main-menu">
+          <div class="main-menu__container">
+            <a href="catalog.html" class="main-menu__item main-menu__item--catalog">Каталог товаров</a>
+            <a href="form.html" class="main-menu__item main-menu__item--custom main-menu__item--bl">Вязание на заказ</a>
+            <a href="" class="main-menu__item main-menu__item--logo">
+              <img class="main-menu__logo" src="img/logo-mobile.svg" alt="Логотип MISHKA" width="87" height="35">
+            </a>
+            <a href="" class="main-menu__item main-menu__item--search main-menu__item--bl">Поиск по сайту</a>
+            <a href="" class="main-menu__item main-menu__item--cart main-menu__item--bl">Корзина: пока пуста</a>
+            <a href="" class="main-menu__item">Новые поступления</a>
+            <a href="" class="main-menu__item">Распродажа</a>       <a class="main-menu__item main-menu__item--note">Бесплатная доставка по России</a>
+          </div>
+        </nav>
+
+        <div class="promo">
+          <div class="promo__container">
+            <h1 class="promo__title">Милые штуки<br> ручной<br> работы для дома</h1>
+          </div>
         </div>
 
-        <h1 class="page-header__title">Милые штуки<br> ручной<br> работы для дома</h1>
+
+      </div>
+    </header>
+
+    <main class="page-content">
+      <div class="page-content__container">
 
         <div class="secondary-menu">
           <ul class="secondary-menu__list">
@@ -55,11 +50,6 @@
             </li>
           </ul>
         </div>
-      </div>
-    </header>
-
-    <main class="page-content">
-      <div class="page-content__container">
 
         <section class="item-featured">
             <div class="item-featured__container">
@@ -131,8 +121,8 @@
               <div class="contacts__row">
                 <span>адрес:</span>
                 <span>г. Санкт-Петербург,<br>
-                    ул. Большая Конюшенная,<br>
-                    д. 19/8, офис 101
+                    ул.&nbsp;Большая Конюшенная,<br>
+                    д.&nbsp;19/8, офис 101
                 </span>
               </div>
             </address>
@@ -144,7 +134,7 @@
             <a class="btn contacts__btn" href="#">Напишите нам</a>
           </div>
         </section>
-
+      </div>
     </main>
 
     <footer class="page-footer">
