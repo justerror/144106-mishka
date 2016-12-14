@@ -1,12 +1,5 @@
-.item-custom__container {
+.item-custom {
   padding-top: 23px;
-//  padding-right: 30px;
-//  padding-left: 30px;
-//
-//  @media @tablet-widths {
-//    padding-right: 50px;
-//    padding-left: 50px;
-//  }
 }
 
 .item-custom__text {
@@ -45,7 +38,7 @@
     }
   }
 
-    &::after {
+    &:not(:last-child)::after {
       content: '';
       position: absolute;
       z-index: -1000;
@@ -99,8 +92,12 @@
 
   @media @tablet-widths {
     position: absolute;
-    left: 0;
+    left: 50px;
     background-color: transparent;
+  }
+
+  @media @desktop-widths {
+    left: 110px;
   }
 }
 
@@ -194,9 +191,12 @@
 
 .item-custom__textarea {
   .bordered(@head-color, 2px);
-  outline: 0;
-  padding: 0;
+
+  height: 142px;
   margin: 0;
+  margin-bottom: 17px;
+  padding: 10px;
+  outline: 0;
 }
 
 .item-custom__btn-wrap {
@@ -223,6 +223,7 @@
   .font(14px, 16px, normal, @base-color);
 
   display: block;
+  margin-bottom: 30px;
 
   @media @tablet-widths {
     order: 1;
