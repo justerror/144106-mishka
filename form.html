@@ -37,90 +37,86 @@
 
 
     <main class="page-content">
-      <div class="page-content__container">
-
-        <section class="item-custom">
-          <div class="item-custom__container">
-            <p class="item-custom__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-            <form class="item-custom__form" action="https://echo.htmlacademy.ru" method="post">
-              <fieldset class="item-custom__set">
-                <div class="item-custom__inner">
-                  <h2 class="item-custom__legend">Тип</h2>
-                  <input class="item-custom__input" id="item-1" type="radio" name="item-type" value="accessory" checked>
-                  <label class="item-custom__label item-custom__label--radio" for="item-1">Аксессуар для интерьера</label>
-                  <input class="item-custom__input" id="item-2" type="radio" name="item-type" value="toy">
-                  <label class="item-custom__label item-custom__label--radio" for="item-2">Детская игрушка</label>
+      <section class="item-custom">
+        <div class="item-custom__container">
+          <p class="item-custom__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          <form class="item-custom__form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="item-custom__set">
+              <div class="item-custom__inner">
+                <h2 class="item-custom__legend">Тип</h2>
+                <input class="item-custom__input" id="item-1" type="radio" name="item-type" value="accessory" checked>
+                <label class="item-custom__label item-custom__label--radio" for="item-1">Аксессуар для интерьера</label>
+                <input class="item-custom__input" id="item-2" type="radio" name="item-type" value="toy">
+                <label class="item-custom__label item-custom__label--radio" for="item-2">Детская игрушка</label>
+              </div>
+            </fieldset>
+            <fieldset class="item-custom__set item-custom__set--bg">
+              <div class="item-custom__inner item-custom__inner--row">
+                <h2 class="item-custom__legend">Цвет</h2>
+                <input class="item-custom__input" id="item-3" type="checkbox" name="item-color" value="white" checked>
+                <label class="item-custom__label item-custom__label--checkbox" for="item-3">Белый</label>
+                <input class="item-custom__input" id="item-4" type="checkbox" name="item-color" value="gray" checked>
+                <label class="item-custom__label item-custom__label--checkbox" for="item-4">Серый</label>
+                <input class="item-custom__input" id="item-5" type="checkbox" name="item-color" value="tiffany">
+                <label class="item-custom__label item-custom__label--checkbox" for="item-5">&laquo;Тиффани&raquo;</label>
+                <input class="item-custom__input" id="item-6" type="checkbox" name="item-color" value="black">
+                <label class="item-custom__label item-custom__label--checkbox" for="item-6">Черный</label>
+                <input class="item-custom__input" id="item-7" type="checkbox" name="item-color" value="pink">
+                <label class="item-custom__label item-custom__label--checkbox" for="item-7">Розовый</label>
+                <input class="item-custom__input" id="item-8" type="checkbox" name="item-color" value="orange">
+                <label class="item-custom__label item-custom__label--checkbox" for="item-8">Оранжевый</label>
+              </div>
+            </fieldset>
+            <fieldset class="item-custom__set item-custom__set--fio">
+              <div class="item-custom__inner">
+                <h2 class="item-custom__legend">ФИО</h2>
+                <div class="item-custom__input-wrap">
+                  <label class="item-custom__label2" for="item-9">Имя:</label>
+                  <input class="item-custom__input2" id="item-9" type="text" name="buyer-name" placeholder="Введите ваше имя*" required>
                 </div>
-              </fieldset>
-              <fieldset class="item-custom__set item-custom__set--bg">
-                <div class="item-custom__inner item-custom__inner--row">
-                  <h2 class="item-custom__legend">Цвет</h2>
-                  <input class="item-custom__input" id="item-3" type="checkbox" name="item-color" value="white" checked>
-                  <label class="item-custom__label item-custom__label--checkbox" for="item-3">Белый</label>
-                  <input class="item-custom__input" id="item-4" type="checkbox" name="item-color" value="gray" checked>
-                  <label class="item-custom__label item-custom__label--checkbox" for="item-4">Серый</label>
-                  <input class="item-custom__input" id="item-5" type="checkbox" name="item-color" value="tiffany">
-                  <label class="item-custom__label item-custom__label--checkbox" for="item-5">&laquo;Тиффани&raquo;</label>
-                  <input class="item-custom__input" id="item-6" type="checkbox" name="item-color" value="black">
-                  <label class="item-custom__label item-custom__label--checkbox" for="item-6">Черный</label>
-                  <input class="item-custom__input" id="item-7" type="checkbox" name="item-color" value="pink">
-                  <label class="item-custom__label item-custom__label--checkbox" for="item-7">Розовый</label>
-                  <input class="item-custom__input" id="item-8" type="checkbox" name="item-color" value="orange">
-                  <label class="item-custom__label item-custom__label--checkbox" for="item-8">Оранжевый</label>
+                <div class="item-custom__input-wrap">
+                  <label class="item-custom__label2" for="item-10">Фамилия:</label>
+                  <input class="item-custom__input2" id="item-10" type="text" name="buyer-surname" placeholder="Укажите фамилию*" required>
                 </div>
-              </fieldset>
-              <fieldset class="item-custom__set item-custom__set--fio">
-                <div class="item-custom__inner">
-                  <h2 class="item-custom__legend">ФИО</h2>
-                  <div class="item-custom__input-wrap">
-                    <label class="item-custom__label2" for="item-9">Имя:</label>
-                    <input class="item-custom__input2" id="item-9" type="text" name="buyer-name" placeholder="Введите ваше имя*" required>
-                  </div>
-                  <div class="item-custom__input-wrap">
-                    <label class="item-custom__label2" for="item-10">Фамилия:</label>
-                    <input class="item-custom__input2" id="item-10" type="text" name="buyer-surname" placeholder="Укажите фамилию*" required>
-                  </div>
-                  <div class="item-custom__input-wrap">
-                    <label class="item-custom__label2" for="item-11">Отчество:</label>
-                    <input class="item-custom__input2" id="item-11" type="text" name="buyer-midname" placeholder="Отчество, если желаете">
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="item-custom__set item-custom__set--tel item-custom__set--bg">
-                <div class="item-custom__inner">
-                  <h2 class="item-custom__legend item-custom__legend--tel">ТЕЛ</h2>
-                  <div class="item-custom__input-wrap">
-                    <label class="item-custom__label2 item-custom__label2--empty" for="item-12"></label>
-                    <input class="item-custom__input2 item-custom__input2--tel" id="item-12" type="tel" name="buyer-tel" placeholder="+7 ХХХ ХХ ХХ*" required>
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="item-custom__set item-custom__set--bg">
-                <div class="item-custom__inner">
-                  <h2 class="item-custom__legend item-custom__legend--email">E-MAIL</h2>
-                  <div class="item-custom__input-wrap">
-                    <label class="item-custom__label2 item-custom__label2--empty" for="item-13"></label>
-                    <input class="item-custom__input2" id="item-13" type="email" name="buyer-email" placeholder="Ваш Email*" required>
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="item-custom__set">
-                <div class="item-custom__inner">
-                  <h2 class="item-custom__legend">ДОП</h2>
-                  <textarea class="item-custom__textarea" name="buyer-extra" rows="10">Опишите все ваши пожелания к заказу</textarea>
-                </div>
-              </fieldset>
-              <div class="item-custom__set">
-                <div class="item-custom__btn-wrap">
-                  <span class="item-custom__note">*Поля обязательны для заполнения</span>
-                  <button class="btn item-custom__btn" type="submit">Отправить заказ</button>
+                <div class="item-custom__input-wrap">
+                  <label class="item-custom__label2" for="item-11">Отчество:</label>
+                  <input class="item-custom__input2" id="item-11" type="text" name="buyer-midname" placeholder="Отчество, если желаете">
                 </div>
               </div>
-            </form>
-          </div>
-        </section>
-
-      </div>
+            </fieldset>
+            <fieldset class="item-custom__set item-custom__set--tel item-custom__set--bg">
+              <div class="item-custom__inner">
+                <h2 class="item-custom__legend item-custom__legend--tel">ТЕЛ</h2>
+                <div class="item-custom__input-wrap">
+                  <label class="item-custom__label2 item-custom__label2--empty" for="item-12"></label>
+                  <input class="item-custom__input2 item-custom__input2--tel" id="item-12" type="tel" name="buyer-tel" placeholder="+7 ХХХ ХХ ХХ*" required>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="item-custom__set item-custom__set--bg">
+              <div class="item-custom__inner">
+                <h2 class="item-custom__legend item-custom__legend--email">E-MAIL</h2>
+                <div class="item-custom__input-wrap">
+                  <label class="item-custom__label2 item-custom__label2--empty" for="item-13"></label>
+                  <input class="item-custom__input2" id="item-13" type="email" name="buyer-email" placeholder="Ваш Email*" required>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="item-custom__set">
+              <div class="item-custom__inner">
+                <h2 class="item-custom__legend">ДОП</h2>
+                <textarea class="item-custom__textarea" name="buyer-extra">Опишите все ваши пожелания к заказу</textarea>
+              </div>
+            </fieldset>
+            <div class="item-custom__set">
+              <div class="item-custom__btn-wrap">
+                <span class="item-custom__note">*Поля обязательны для заполнения</span>
+                <button class="btn item-custom__btn" type="submit">Отправить заказ</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
