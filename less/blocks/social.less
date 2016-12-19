@@ -18,22 +18,16 @@
 }
 
 .social__link {
+  position: relative;
+  font-size: 0;
   width: 60px;
   height: 30px;
-  font-size: 0;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  &--ig {
-    margin-left: -4px;
-    background-image: url(../img/icon-insta.svg);
-  }
+}
 
-  &--fb {
-    background-image: url(../img/icon-fb.svg);
-  }
-
-  &--tw {
-    margin-left: -1px;
-    background-image: url(../img/icon-twitter.svg);
-  }
+.social__icon {
+  .svg-styleguide();
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
 }

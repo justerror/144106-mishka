@@ -1,5 +1,24 @@
 .item-featured {
   .font(15px, 24px, normal);
+
+    padding-bottom: 11px;
+    background-image: url(../img/bg-zigzag-line.svg);
+    background-repeat: repeat-x;
+    background-position: 11px bottom;
+    background-size: auto 7px;
+
+  @media @tablet-widths {
+    background-position: 26px bottom;
+    background-size: auto 15px;
+    padding-bottom: 0;
+  }
+
+  @media @tablet-widths {
+    padding-bottom: 27px;
+    background-size: auto 23px;
+    background-position: 28px bottom;
+  }
+
 }
 
 .item-featured__container {
@@ -12,13 +31,14 @@
   padding-left: 30px;
 
   @media @tablet-widths {
-    padding-top: 50px;
+    padding-top: 0;
     padding-right: 50px;
     padding-left: 50px;
+    top: -68px;
   }
 
   @media @desktop-widths {
-    margin-top: 67px;
+    margin-top: 132px;
     padding-top: 60px;
     padding-left: 225px;
   }
@@ -30,7 +50,8 @@
   margin-bottom: 8px;
 
   @media @tablet-widths {
-    margin-bottom: 48px;
+    margin-left: -4px;
+    margin-bottom: 49px;
   }
 }
 
@@ -122,9 +143,10 @@
 .item-featured__img {
   width: 100%;
   height: auto;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 
   @media @tablet-widths {
+    width: auto;
     position: absolute;
     height: 100%;
     padding-top: 8px;
@@ -156,6 +178,10 @@
     .font(20px, 24px, bold, @base-color);
 
     margin-bottom: 34px;
+  }
+
+  @media @desktop-widths {
+    margin-left: 7px;
   }
 }
 

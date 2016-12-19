@@ -41,7 +41,11 @@
         <article class="item">
           <div class="item__container">
             <a class="item__img-wrap" href="#">
-              <img class="item__img" src="img/photo-1-mobile@1x.jpg" alt="Фото предмета">
+              <picture class="item__img">
+                <source media="(min-width: 1150px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x"  alt="Зайчик-попрыгайчик">
+              </picture>
             </a>
             <div class="item__inner">
               <a class="item__link" href="#">
@@ -59,7 +63,11 @@
         <article class="item">
           <div class="item__container">
             <a class="item__img-wrap" href="#">
-              <img class="item__img" src="img/photo-2-mobile@1x.jpg" alt="Фото предмета">
+              <picture class="item__img">
+                <source media="(min-width: 1150px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x"  alt="Корзинка для белья">
+              </picture>
             </a>
             <div class="item__inner">
               <a class="item__link" href="#">
@@ -77,7 +85,11 @@
         <article class="item">
           <div class="item__container">
             <a class="item__img-wrap" href="#">
-              <img class="item__img" src="img/photo-3-mobile@1x.jpg" alt="Фото предмета">
+              <picture class="item__img">
+                <source media="(min-width: 1150px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x"  alt="Большая корзинка для игрушек">
+              </picture>
             </a>
             <div class="item__inner">
               <a class="item__link" href="#">
@@ -95,9 +107,11 @@
         <article class="item-extra">
           <div class="item-extra__container">
             <h2 class="item-extra__title">Процесс производства</h2>
-            <div class="item-extra__video-wrap">
-              <img class="item-extra__video" src="img/video-mobile@1x.jpg" alt="">
-            </div>
+            <picture class="item-extra__video">
+              <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x"  alt="Видео про процесс производства наших товаров">
+            </picture>
             <p class="item-extra__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
             <div class="item-extra__btn-wrap">
               <a class="btn item-extra__btn" href="#">Сделать заказ</a>

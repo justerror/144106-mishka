@@ -40,7 +40,7 @@
 }
 
 // Заголовки секций
-.heading {
+.heading() {
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
@@ -54,5 +54,43 @@
   @media @desktop-widths {
     font-size: 53px;
     line-height: 57px;
+  }
+}
+
+.svg-adaptive() {
+   &--mobile {
+    @media @tablet-widths {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media @tablet-widths {
+      display: block;
+    }
+
+    @media @desktop-widths {
+      display:none
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media @desktop-widths {
+      display: block;
+    }
+  }
+}
+
+.svg-styleguide() {
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

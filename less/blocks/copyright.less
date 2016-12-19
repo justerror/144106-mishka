@@ -6,6 +6,23 @@
   align-items: center;
   padding: 20px 0 25px 0;
 
+  &:hover {
+    svg {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+    span {
+      opacity: 0.3;
+    }
+  }
+
+
+
   @media @tablet-widths {
     justify-content: flex-end;
     padding: 0;
@@ -24,3 +41,4 @@
     }
   }
 }
+

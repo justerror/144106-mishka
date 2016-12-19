@@ -1,4 +1,40 @@
+.secondary-menu {
+
+  @media @tablet-widths {
+    position: relative;
+    top: -115px;
+
+    &::after {
+      z-index: 2;
+      content: '';
+      position: absolute;
+      background-image: url(../img/bg-zigzag-fill.svg);
+      background-position: -5px top;
+      background-size: auto 23px;
+      width: 100%;
+      height: 15px;
+      background-repeat: repeat-x;
+      color: red;
+      bottom: -4px;
+    }
+  }
+
+  @media @desktop-widths {
+    &::after {
+      height: 23px;
+      background-size: auto;
+      background-position: 0 3px;
+    }
+  }
+
+}
+
+
+
 .secondary-menu__list {
+  max-width: 1150px;
+  margin: 0 auto;
+
   @media @tablet-widths {
     display: flex;
     padding: 0 50px;
@@ -7,17 +43,15 @@
 
 .secondary-menu__item {
   position: relative;
-
-  &--left {
-    background: #63d1bb url(../img/icon-interior.svg) no-repeat 87% 50%;
-  }
+  min-height: 103px;
+  background-color: #59d5bc;
 
   &--right {
-    background: #56c3b2 url(../img/icon-toy.svg) no-repeat 90% 50%;
+    background-color: #46c1ae;
   }
 
   @media @tablet-widths {
-    flex-basis: 50%;
+    flex-basis: 100%;
   }
 }
 
@@ -25,11 +59,70 @@
   .font(19px, 24px, bold, @alt-color);
 
   display: block;
+  width: 100%;
+  min-height: 103px;
   padding: 25px 160px 30px 30px;
+  transition: 0.2s transform;
+
+  &--left {
+    background: #63d1bb;
+
+    &:hover {
+      background: #59d5bc;
+
+      svg {
+        opacity: 0.7;
+      }
+
+      transform: translateY(-5px);
+    }
+    &:active {
+      background: #59d5bc;
+      & span {
+        opacity: 0.3;
+      }
+      svg {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--right {
+    background: #56c3b2;
+
+    &:hover {
+      background: #46c1ae;
+      transform: translateY(-5px);
+
+      svg {
+        opacity: 0.7;
+      }
+    }
+    &:active {
+      background: #59d5bc;
+      & span {
+        opacity: 0.3;
+      }
+      svg {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 23px;
+    right: 36px;
+    opacity: 0.5;
+  }
+
+  &--right svg {
+    top: 21px;
+    right: 27px;
+  }
 
   @media @tablet-widths {
     .font(20px, 30px, bold, @alt-color);
-
-    width: 50%;
+    min-height: 117px;
   }
 }

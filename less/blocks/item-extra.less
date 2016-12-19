@@ -8,9 +8,6 @@
 
   position: relative;
 
-  @media @tablet-widths {
-  }
-
   @media @desktop-widths {
     padding-left: 681px;
   }
@@ -58,12 +55,12 @@
   }
 }
 
-.item-extra__video-wrap {
+.item-extra__video {
   background-color: #62d1ba;
+  position: relative;
 
   @media @tablet-widths {
     order: -1;
-    min-height: 455px;
   }
 
   @media @desktop-widths {
@@ -121,4 +118,10 @@
 
 .item-extra__btn {
   margin-bottom: 0;
+}
+
+
+.item-extra__video img {
+  width: 100%;
+  height: 100%;
 }
