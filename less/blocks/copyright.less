@@ -4,7 +4,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0 25px 0;
+  padding: 19px 0 27px 0;
+
+  @media @tablet-widths {
+    justify-content: flex-end;
+    padding: 0;
+  }
 
   &:hover {
     svg {
@@ -20,17 +25,10 @@
       opacity: 0.3;
     }
   }
-
-
-
-  @media @tablet-widths {
-    justify-content: flex-end;
-    padding: 0;
-  }
 }
 
 .copyright__link :nth-child(n) {
-  margin: 0 14px;
+  margin: 0 15px;
 
   @media @tablet-widths {
     margin: 0;
@@ -44,6 +42,5 @@
 
 .copyright__logo {
   width: 27px;
-  height: 34px;
+  transform: translate(-1px, 3px);
 }
-

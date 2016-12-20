@@ -1,44 +1,42 @@
 .item-featured {
-  .font(15px, 24px, normal);
+  .font(15px, 24px, normal, @base-color);
 
-    padding-bottom: 11px;
-    background-image: url(../img/bg-zigzag-line.svg);
-    background-repeat: repeat-x;
-    background-position: 11px bottom;
-    background-size: auto 7px;
+  padding-bottom: 11px;
+  background: url(../img/bg-zigzag-line.svg) repeat-x;
+  background-position: bottom;
+  background-size: auto 6px;
 
   @media @tablet-widths {
+    padding-bottom: 0;
     background-position: 26px bottom;
     background-size: auto 15px;
-    padding-bottom: 0;
   }
 
-  @media @tablet-widths {
+  @media @desktop-widths {
     padding-bottom: 27px;
     background-size: auto 23px;
     background-position: 28px bottom;
   }
-
 }
 
 .item-featured__container {
   .container();
-  width: 100%;
 
   position: relative;
+  width: 100%;
   padding-top: 27px;
   padding-right: 30px;
   padding-left: 30px;
 
   @media @tablet-widths {
+    top: -68px;
     padding-top: 0;
     padding-right: 50px;
     padding-left: 50px;
-    top: -68px;
   }
 
   @media @desktop-widths {
-    margin-top: 132px;
+    margin-top: 17px;
     padding-top: 60px;
     padding-left: 225px;
   }
@@ -50,7 +48,11 @@
   margin-bottom: 8px;
 
   @media @tablet-widths {
-    margin-left: -4px;
+    margin-left: -3px;
+    margin-bottom: 48px;
+  }
+
+  @media @desktop-widths {
     margin-bottom: 49px;
   }
 }
@@ -64,9 +66,9 @@
 
   @media @tablet-widths {
     position: absolute;
+    top: 12px;
+    right: 48px;
     max-width: 130px;
-    top: 61px;
-    right: 50px;
     text-align: center;
   }
 
@@ -99,13 +101,13 @@
   margin-bottom: 17px;
 
   @media @tablet-widths {
-    .font(17px, 30px, normal, @base-color);
-
-    margin-bottom: 33px;
+    margin-bottom: 36px;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   @media @desktop-widths {
-    margin-bottom: 48px;
+    margin-bottom: 50px;
   }
 }
 
@@ -116,7 +118,7 @@
   margin-bottom: 28px;
 
   @media @tablet-widths {
-    margin-bottom: 55px;
+    margin-bottom: 56px;
   }
 
   @media @desktop-widths {
@@ -129,6 +131,11 @@
 
   td {
     padding: 10px 0 9px 0;
+
+    @media @desktop-widths {
+      padding-top: 8px;
+      padding-bottom: 11px;
+    }
   }
 
   td:first-child {
@@ -146,13 +153,13 @@
   margin-bottom: 18px;
 
   @media @tablet-widths {
-    width: auto;
     position: absolute;
-    height: 100%;
-    padding-top: 8px;
     top: 0;
     right: -100%;
     bottom: 0;
+    width: auto;
+    height: 100%;
+    padding-top: 8px;
   }
 
   @media @desktop-widths {
@@ -175,8 +182,8 @@
   text-align: center;
 
   @media @tablet-widths {
-    .font(20px, 24px, bold, @base-color);
-
+    font-size: 20px;
+    margin-left: 5px;
     margin-bottom: 34px;
   }
 

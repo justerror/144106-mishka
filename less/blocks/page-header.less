@@ -1,5 +1,10 @@
+.page-header--js {
+  @media @df-mobile-widths {
+    margin-top: 80px;
+  }
+}
+
 .page-header__container {
-  position: relative;
   min-width: 320px;
 }
 
@@ -17,5 +22,11 @@
 
   @media @tablet-widths {
     display: none;
+  }
+
+  &--closed {
+    top: 32px;
+    right: 29px;
+    background-image: url(../img/icon-menu-open.svg);
   }
 }

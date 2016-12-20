@@ -1,21 +1,20 @@
 .secondary-menu {
-
   @media @tablet-widths {
     position: relative;
     top: -115px;
 
     &::after {
-      z-index: 2;
       content: '';
       position: absolute;
+      bottom: -4px;
+      z-index: 2;
+      width: 100%;
+      height: 15px;
       background-image: url(../img/bg-zigzag-fill.svg);
       background-position: -5px top;
       background-size: auto 23px;
-      width: 100%;
-      height: 15px;
       background-repeat: repeat-x;
       color: red;
-      bottom: -4px;
     }
   }
 
@@ -26,7 +25,6 @@
       background-position: 0 3px;
     }
   }
-
 }
 
 
@@ -46,13 +44,14 @@
   min-height: 103px;
   background-color: #59d5bc;
 
+  @media @tablet-widths {
+    flex-basis: 100%;
+  }
+
   &--right {
     background-color: #46c1ae;
   }
 
-  @media @tablet-widths {
-    flex-basis: 100%;
-  }
 }
 
 .secondary-menu__link {
@@ -60,69 +59,84 @@
 
   display: block;
   width: 100%;
-  min-height: 103px;
   padding: 25px 160px 30px 30px;
   transition: 0.2s transform;
 
+  svg {
+    position: absolute;
+    top: 21px;
+    right: 36px;
+    opacity: 0.5;
+
+    @media @tablet-widths {
+      top: 30px;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+
+    svg {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    span {
+      opacity: 0.3;
+    }
+
+    svg {
+      opacity: 0.3;
+    }
+  }
+
   &--left {
-    background: #63d1bb;
+    background-color: #63d1bb;
 
     &:hover {
-      background: #59d5bc;
-
-      svg {
-        opacity: 0.7;
-      }
-
-      transform: translateY(-5px);
+      background-color: #59d5bc;
     }
+
     &:active {
-      background: #59d5bc;
-      & span {
-        opacity: 0.3;
-      }
-      svg {
-        opacity: 0.3;
-      }
+      background-color: #59d5bc;
     }
   }
 
   &--right {
-    background: #56c3b2;
+    background-color: #56c3b2;
 
     &:hover {
-      background: #46c1ae;
-      transform: translateY(-5px);
-
-      svg {
-        opacity: 0.7;
-      }
+      background-color: #46c1ae;
     }
+
     &:active {
-      background: #59d5bc;
-      & span {
-        opacity: 0.3;
-      }
-      svg {
-        opacity: 0.3;
+      background-color: #59d5bc;
+    }
+
+    & svg {
+      top: 21px;
+      right: 27px;
+
+      @media @tablet-widths {
+        top: 31px;
+        right: 34px;
       }
     }
-  }
-
-  svg {
-    position: absolute;
-    top: 23px;
-    right: 36px;
-    opacity: 0.5;
-  }
-
-  &--right svg {
-    top: 21px;
-    right: 27px;
   }
 
   @media @tablet-widths {
     .font(20px, 30px, bold, @alt-color);
     min-height: 117px;
+    padding: 28px 160px 30px 35px;
+  }
+
+  @media @desktop-widths {
+    padding-right: 320px;
+
+    &--left span {
+      display: block;
+      padding-left: 3px;
+    }
   }
 }
