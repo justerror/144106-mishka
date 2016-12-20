@@ -1,5 +1,5 @@
 .item {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   @media @tablet-widths {
     margin-bottom: 54px;
@@ -40,7 +40,7 @@
 .item__inner {
   .bordered(#ededed);
 
-  padding: 27px 30px;
+  padding: 27px 27px;
 
   @media @tablet-widths {
     display: flex;
@@ -62,6 +62,14 @@
 
   position: relative;
   margin-bottom: 5px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media @tablet-widths {
     font-size: 20px;
@@ -121,10 +129,26 @@
   height: 100%;
 }
 
+.item__link {
+
+}
+
 .item__link--basket {
   float: right;
   width: 21px;
   height: 21px;
   font-size: 0;
-  background: url(../img/icon-cart.svg) no-repeat center ;
+
+  &:hover svg {
+    fill: #63d1bb;
+    opacity: 1;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+
+  svg {
+    opacity: 0.2;
+  }
 }
