@@ -30,6 +30,17 @@
   &--nobg {
     background-image: none;
     padding-top: 20px;
+
+    @media @tablet-widths {
+        background-image: url(../img/bg-zigzag-fill.svg);
+        background-position: -5px bottom;
+        background-size: auto 23px;
+        background-repeat: repeat-x;
+    }
+
+    @media @desktop-widths {
+      background-size: auto 35px;
+    }
   }
 }
 
@@ -47,19 +58,24 @@
 
   @media @desktop-widths {
     min-height: 741px;
-    padding-right: 200px;
-    padding-left: 200px;
+//    padding-right: 200px;
+//    padding-left: 200px;
   }
 
   &--nobg {
     min-height: 156px;
+    padding-top: 50px;
 
     @media @tablet-widths {
-      min-height: 225px;
+      min-height: 216px;
+      padding-top: 75px;
+      padding-left: 58px;
     }
 
     @media @desktop-widths {
-      min-height: 250px;
+      min-height: 251px;
+      padding-top: 73px;
+      padding-left: 52px;
     }
   }
 }
