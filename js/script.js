@@ -16,7 +16,7 @@ while (i--) {
 var hamburger = document.querySelector('.page-header__toggle');
 hamburger.classList.add('page-header__toggle--closed');
 
-hamburger.addEventListener("click", function(event) {
+hamburger.addEventListener('click', function(event) {
   hamburger.classList.toggle('page-header__toggle--closed');
 
   (function() {
@@ -27,3 +27,11 @@ hamburger.addEventListener("click", function(event) {
 })();
 
 });
+
+var buyBtn = document.querySelector('.item-featured__btn');
+var itemModal = document.querySelector('.item-modal');
+
+buyBtn.addEventListener('click', function(event) {
+  event.preventDefault();
+  itemModal.classList.add('item-modal--show');
+})
