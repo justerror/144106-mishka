@@ -57,20 +57,21 @@
 
   &--catalog {
     flex-basis: 185px;
+    max-width: 185px;
 
     @media @df-tablet-widths {
       order: 5;
       flex-basis: 155px;
-
-      margin-right: 10px;
+      max-width: 155px;
       min-height: 55px;
+      margin-right: 10px;
       font-size: 15px;
     }
 
     @media @df-mobile-widths {
       order: -2;
       flex-basis: 80px;
-
+      max-width: none;
       margin-right: 0;
       padding-left: 35px;
       line-height: auto;
@@ -85,11 +86,11 @@
 
   &--custom {
     flex-basis: 193px;
+    max-width: 193px;
     padding-left: 35px;
 
     @media @df-tablet-widths {
       order: 6;
-
       min-height: 55px;
       padding-left: 0;
       border-left: none;
@@ -98,8 +99,8 @@
 
     @media @df-mobile-widths {
       order: -1;
-
       flex-basis: 80px;
+      max-width: none;
       line-height: auto;
     }
 
@@ -122,6 +123,7 @@
       flex-basis: 52%;
       justify-content: flex-start;
 
+      max-width: 52%;
       margin-left: 0;
       margin-right: auto;
     }
@@ -133,6 +135,7 @@
     @media @df-mobile-widths {
       justify-content: center;
       flex-basis: 80px;
+      max-width: none;
       min-height: auto;
       margin-right: 0;
       background-color: #fff;
@@ -149,51 +152,34 @@
 
   &--search {
     flex-basis: 83px;
-
+    max-width: 83px;
     padding-left: 83px;
     font-size: 0;
 
     @media @df-mobile-widths {
       flex-basis: 80px;
+      max-width: none;
       min-height: auto;
       font-size: inherit;
     }
-
-//    &::before {
-//      content: '';
-//      position: absolute;
-//      top: 50%;
-//      left: 33px;
-//      width: 20px;
-//      height: 20px;
-//      background: url(../img/icon-search.svg) no-repeat 50%;
-//      transform: translateY(-50%);
-//      opacity: 0.2;
-//
-//      @media @df-mobile-widths {
-//        left: 0;
-//      }
-//
-//      @media @df-mobile-widths {
-//        left: 30px;
-//      }
-//    }
   }
 
   &--cart {
     display: flex;
     justify-content: flex-end;
     flex-basis: 267px;
-
+    min-width: 267px;
     padding-left: 82px;
 
     @media @df-tablet-widths {
       flex-basis: 265px;
+      max-width: 265px;
     }
 
     @media @df-mobile-widths {
       flex-basis: 80px;
       justify-content: flex-start;
+      max-width: none;
       min-height: auto;
     }
 
