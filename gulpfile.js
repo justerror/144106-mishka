@@ -12,6 +12,7 @@ var imagemin = require("gulp-imagemin");
 var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var del = require("del");
+var run = require("run-sequence");
 
 gulp.task("style", function() {
   gulp.src("less/style.less")
@@ -78,5 +79,5 @@ gulp.task("clean", function() {
 });
 
 gulp.task("build", function(fn) {
-  run ("clean", "copy" ,"style", "images", "symbols", fn);
+  run("clean", "copy" ,"style", "images", "symbols", fn);
 });
