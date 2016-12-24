@@ -280,22 +280,23 @@
       </div>
     </footer>
 
-    <section class="item-modal">
-      <div class="item-modal__container">
-        <h2 class="item-modal__title">Добавить в корзину</h2>
-        <span class="item-modal__text">Выберите размер:</span>
-        <form class="item-modal__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="item-modal__sizes">
-            <label><input type="radio" name="item-size" value="S" checked> S</label>
-            <label><input type="radio" name="item-size" value="M"> M</label>
-            <label><input type="radio" name="item-size" value="L"> L</label>
-          </fieldset>
-          <button class="btn btn--submit" type="submit">Добавить</button>
-        </form>
-      </div>
+   <section class="item-modal">
+      <h2 class="item-modal__title">Добавить в корзину</h2>
+      <span class="item-modal__text">Выберите размер:</span>
+      <form class="item-modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="item-modal__sizes">
+          <input id="item-size-s" type="radio" name="item-size" value="S" checked>
+          <label for="item-size-s" class="item-modal__btn"> S</label>
+          <input id="item-size-m" type="radio" name="item-size" value="M">
+          <label for="item-size-m" class="item-modal__btn"> M</label>
+          <input id="item-size-l" type="radio" name="item-size" value="L">
+          <label for="item-size-l" class="item-modal__btn"> L</label>
+        </div>
+        <button class="item-modal__btn--submit btn btn--submit" type="submit">Добавить</button>
+      </form>
     </section>
 
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
   </body>
 </html>
