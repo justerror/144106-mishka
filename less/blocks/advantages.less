@@ -1,18 +1,18 @@
 .advantages__container {
   .container();
 
-  padding-top: 39px;
+  padding-top: 28px;
   padding-right: 30px;
   padding-left: 30px;
 
   @media @tablet-widths {
-    padding-top: 118px;
+    padding-top: 51px;
     padding-right: 50px;
     padding-left: 50px;
   }
 
   @media @desktop-widths {
-    padding-top: 155px;
+    padding-top: 59px;
     padding-left: 225px;
     padding-right: 225px;
   }
@@ -21,9 +21,15 @@
 .advantages__title {
   .heading();
 
+  margin-left: -2px;
   margin-bottom: 36px;
 
   @media @tablet-widths {
+    margin-left: -5px;
+    margin-bottom: 52px;
+  }
+
+  @media @desktop-widths {
     margin-bottom: 53px;
   }
 }
@@ -44,8 +50,9 @@
   padding-top: 50px;
 
   @media @tablet-widths {
-    margin-bottom: 64px;
+    margin-bottom: 59px;
     font-size: 20px;
+    line-height: 23px;
   }
 
   &::before {
@@ -60,38 +67,66 @@
 
   &--feature-1 {
     order: -7;
+    padding-right: 70px;
+
+    @media @tablet-widths {
+      padding-right: 110px;
+    }
+
+    @media @desktop-widths {
+      padding-right: 130px;
+    }
 
     &::before {
-      background-image: url(../img/icon-feature-1.svg);
+      background-image: url('../img/icon-feature-1.svg');
     }
   }
 
   &--feature-2 {
     order: -5;
+    padding-right: 50px;
+
+    @media @tablet-widths {
+      padding-right: 70px;
+    }
+
+    @media @desktop-widths {
+      padding-right: 100px;
+    }
 
     &::before {
-    top: -15px;
-    left: -2px;
-    background-image: url(../img/icon-feature-3.svg);
+      top: -15px;
+      left: -2px;
+      background-image: url('../img/icon-feature-3.svg');
     }
   }
 
   &--feature-3 {
     order: -3;
+    padding-right: 70px;
+
+    @media @tablet-widths {
+      padding-right: 110px;
+    }
 
     &::before {
-    left: -2px;
-    background-image: url(../img/icon-feature-5.svg);
+      left: -2px;
+      background-image: url('../img/icon-feature-5.svg');
     }
   }
 
   &--feature-4 {
     order: -6;
+    padding-right: 49px;
+
+    @media @tablet-widths {
+      padding-right: 70px;
+    }
 
     &::before {
-    top: -10px;
-    left: -5px;
-    background-image: url(../img/icon-feature-2.svg);
+      top: -10px;
+      left: -5px;
+      background-image: url('../img/icon-feature-2.svg');
     }
   }
 
@@ -99,14 +134,22 @@
     order: -4;
 
     &::before {
-    top: -14px;
-    left: -5px;
-    background-image: url(../img/icon-feature-4.svg);
+      top: -14px;
+      left: -5px;
+      background-image: url('../img/icon-feature-4.svg');
     }
   }
 
-  &--feature-6::before {
-    left: -6px;
-    background-image: url(../img/icon-feature-6.svg);
+  &--feature-6 {
+    padding-right: 50px;
+
+    @media @tablet-widths {
+      padding-right: 60px;
+    }
+
+    &::before {
+      left: -6px;
+      background-image: url('../img/icon-feature-6.svg');
+    }
   }
 }

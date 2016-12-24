@@ -8,9 +8,9 @@
   padding-left: 50px;
 
   @media @df-mobile-widths {
+    flex-direction: column;
     padding-right: 0;
     padding-left: 0;
-    flex-direction: column;
   }
 }
 
@@ -57,33 +57,40 @@
 
   &--catalog {
     flex-basis: 185px;
+    max-width: 185px;
 
     @media @df-tablet-widths {
       order: 5;
       flex-basis: 155px;
-
-      margin-right: 10px;
+      max-width: 155px;
       min-height: 55px;
+      margin-right: 10px;
       font-size: 15px;
     }
 
     @media @df-mobile-widths {
       order: -2;
       flex-basis: 80px;
-
+      max-width: none;
       margin-right: 0;
       padding-left: 35px;
       line-height: auto;
+    }
+
+    span {
+      @media @desktop-widths {
+        transform: translate(-1px, -2px);
+      }
     }
   }
 
   &--custom {
     flex-basis: 193px;
+    max-width: 193px;
     padding-left: 35px;
 
     @media @df-tablet-widths {
       order: 6;
-
       min-height: 55px;
       padding-left: 0;
       border-left: none;
@@ -92,9 +99,15 @@
 
     @media @df-mobile-widths {
       order: -1;
-
       flex-basis: 80px;
+      max-width: none;
       line-height: auto;
+    }
+
+    span {
+      @media @desktop-widths {
+        transform: translate(-2px, -2px);
+      }
     }
   }
 
@@ -103,13 +116,14 @@
     justify-content: center;
 
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 54px;
 
     @media @df-tablet-widths {
       order: -10;
       flex-basis: 52%;
       justify-content: flex-start;
 
+      max-width: 52%;
       margin-left: 0;
       margin-right: auto;
     }
@@ -121,41 +135,32 @@
     @media @df-mobile-widths {
       justify-content: center;
       flex-basis: 80px;
+      max-width: none;
       min-height: auto;
       margin-right: 0;
+      background-color: #fff;
+    }
+
+    &:hover svg {
+      opacity: 0.6;
+    }
+
+    &:active svg {
+      opacity: 0.3;
     }
   }
 
   &--search {
     flex-basis: 83px;
-
+    max-width: 83px;
     padding-left: 83px;
     font-size: 0;
 
     @media @df-mobile-widths {
       flex-basis: 80px;
+      max-width: none;
       min-height: auto;
       font-size: inherit;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 33px;
-      width: 20px;
-      height: 20px;
-      background: url(../img/icon-search.svg) no-repeat 50%;
-      transform: translateY(-50%);
-      opacity: 0.2;
-
-      @media @df-mobile-widths {
-        left: 0;
-      }
-
-      @media @df-mobile-widths {
-        left: 30px;
-      }
     }
   }
 
@@ -163,39 +168,27 @@
     display: flex;
     justify-content: flex-end;
     flex-basis: 267px;
-
+    min-width: 267px;
     padding-left: 82px;
-
 
     @media @df-tablet-widths {
       flex-basis: 265px;
+      max-width: 265px;
     }
 
     @media @df-mobile-widths {
       flex-basis: 80px;
       justify-content: flex-start;
+      max-width: none;
       min-height: auto;
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 30px;
-      width: 20px;
-      height: 20px;
-      background: url(../img/icon-cart.svg) no-repeat 50%;
-      transform: translateY(-50%);
-      opacity: 0.2;
-
-      @media @df-mobile-widths {
-        left: 0;
-      }
-
-      @media @df-mobile-widths {
-        left: 30px;
+    span {
+      @media @desktop-widths {
+        transform: translate(-2px, -2px)
       }
     }
+
   }
 
 
@@ -223,5 +216,61 @@
       font-size: 17px;
       line-height: 24px;
     }
+  }
+}
+
+.main-menu__logo {
+  .svg-adaptive();
+}
+
+.main-menu__item-icon {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+
+  opacity: 0.2;
+  transform: translateY(-50%);
+
+  @media @tablet-widths {
+    left: 34px;
+
+    &--cart {
+      left: 31px;
+    }
+  }
+}
+
+.main-menu__item:hover .main-menu__item-icon {
+  fill: #63d1bb;
+  opacity: 1;
+}
+
+.main-menu__item:active .main-menu__item-icon {
+  opacity: 0.3;
+}
+
+.main-menu__item:hover span {
+  opacity: 0.6;
+}
+
+.main-menu__item:active span {
+  opacity: 0.3;
+}
+
+.closed-mobile {
+  display: none;
+
+  @media @tablet-widths {
+    display: flex;
+  }
+}
+
+.main-menu__container--js {
+  @media @df-mobile-widths {
+    position: absolute;
+    top: 0;
+    z-index: 500;
+    width: 100%;
+    background-color: #fff;
   }
 }

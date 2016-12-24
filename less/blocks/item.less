@@ -1,50 +1,63 @@
 .item {
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 
   @media @tablet-widths {
     margin-bottom: 54px;
+
+    &--last {
+      margin-bottom: 54px - 1px;
+    }
   }
 
   @media @desktop-widths {
     width: 315px;
+    margin-right: 38px;
+    margin-bottom: 57px;
+
+    &--last {
+      margin-right: 2px;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0 , 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0 , 0, 0.1);
   }
 }
 
 .item__container {
-//  .container();
-
   position: relative;
-//  padding-top: 30px;
-//  padding-right: 30px;
-//  padding-left: 30px;
 
   @media @tablet-widths {
     display: flex;
-//    padding-right: 50px;
-//    padding-left: 50px;
   }
 
   @media @desktop-widths {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
 
 .item__inner {
   .bordered(#ededed);
 
-  padding: 27px 30px;
+  padding: 27px 27px;
 
   @media @tablet-widths {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
+    padding: 26px 27px;
   }
 
   @media @desktop-widths {
     justify-content: flex-start;
     flex-basis: 197px;
     width: 100%;
+    padding: 26px 26px 26px 24px;
     border-top: 1px solid #ededed;
   }
 }
@@ -55,12 +68,22 @@
   position: relative;
   margin-bottom: 5px;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media @tablet-widths {
+    padding-right: 37px;
     font-size: 20px;
     border-bottom: none;
   }
 
   @media @desktop-widths {
+    padding-right: 27px;
     border: none;
   }
 }
@@ -83,6 +106,12 @@
 .item__control {
   padding-top: 20px;
   border-top: 1px solid #ececec;
+
+  @media @tablet-widths {
+    padding-top: 22px;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
 }
 
 .item__price {
@@ -94,8 +123,6 @@
 }
 
 .item__img-wrap {
-  display: block;
-
   @media @tablet-widths {
     width: 50%;
     min-height: 334px;
@@ -108,24 +135,10 @@
   }
 }
 
-.item__img,
-.item__video {
+.item__img {
   display: block;
   width: 100%;
   height: 100%;
-}
-
-.item__video {
-  margin-bottom: 0;
-  order: -1;
-
-  @media @desktop-widths {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 30px;
-    width: 650px;
-  }
 }
 
 .item__link--basket {
@@ -133,5 +146,17 @@
   width: 21px;
   height: 21px;
   font-size: 0;
-  background: url(../img/icon-cart.svg) no-repeat center ;
+
+  &:hover svg {
+    fill: #63d1bb;
+    opacity: 1;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+
+  svg {
+    opacity: 0.2;
+  }
 }

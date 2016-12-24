@@ -1,28 +1,48 @@
 .item-modal {
   display: none;
-  text-align: center;
-}
 
-.item-modal__container {
-  .container();
+  .bordered(#c6c6c6);
 
-  padding-top: 30px;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  z-index: 1111;
+  transform: translate(-50%, -50%);
+
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px;
   border-top: 1px solid #c7c7c7;
   border-bottom: 1px solid #c7c7c7;
+  background-color: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0 , 0, 0.1);
 
   @media @tablet-widths {
-    width: 566px;
-    padding-right: 109px;
-    padding-left: 109px;
+    width: 567px;
+    padding: 50px 105px;
     border: 1px solid #c7c7c7;
   }
+}
+
+.item-modal--show {
+  display: block;
+}
+
+.item-modal__form {
+  padding: 0;
 }
 
 .item-modal__title {
   .font(25px, 30px, bold, @head-color);
 
   margin-bottom: 30px;
+  text-align: center;
   text-transform: uppercase;
+
+  @media @tablet-widths {
+    font-size: 30px;
+    line-height: 57px;
+  }
 }
 
 .item-modal__text {
@@ -30,10 +50,17 @@
 
   display: block;
   margin-bottom: 30px;
+  text-align: center;
+
+  @media @tablet-widths {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .item-modal__sizes {
   display: flex;
+  margin-bottom: 31px;
 }
 
 .item-modal__sizes label {
@@ -52,4 +79,28 @@
 
 .item-modal__sizes input:checked + label {
   border-color: @sub-color;
+}
+
+.item-modal__btn {
+  .font(17px, 16px, bold, @base-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 52px;
+  margin-bottom: 0;
+  border: 2px solid #ececec;
+  background-color: none;
+
+  @media @tablet-widths {
+    width: 145px;
+  }
+
+  &:hover {
+    border-color: #c7c7c7;
+  }
+
+  &--submit {
+    margin-bottom: 0;
+  }
 }

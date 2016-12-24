@@ -1,17 +1,29 @@
 .page-footer {
   background-color: @bg-color;
 
+  &--index {
+    @media @desktop-widths {
+      margin-top: 105px;
+    }
+  }
+
   &--catalog {
     margin-top: 57px;
 
     @media @tablet-widths {
-      margin-top: 63px;
+      margin-top: 62px;
+    }
+
+    @media @desktop-widths {
+      margin-top: 105px;
     }
   }
 
-  &--index {
-    @media @desktop-widths {
-      margin-top: 137px;
+  &--form {
+    margin-top: 25px;
+
+    @media @tablet-widths {
+      margin-top: 20px;
     }
   }
 }
@@ -21,7 +33,7 @@
 
   @media @tablet-widths {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding-right: 50px;
     padding-left: 50px;
@@ -34,6 +46,13 @@
   @media @tablet-widths {
     display: block;
     width: 28%;
+    margin-top: -3px;
+  }
+}
+
+.page-footer__logo-link {
+  svg {
+    .svg-styleguide();
   }
 }
 

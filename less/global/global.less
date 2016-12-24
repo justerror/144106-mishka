@@ -2,9 +2,15 @@
   box-sizing: border-box;
 }
 
+html {
+  min-width: 320px;
+  height: 100%;
+}
+
 body {
   font-family: @body-font;
   color: @base-color;
+  height: 100%;
 }
 
 ul {
@@ -38,4 +44,8 @@ br {
   @media @tablet-widths {
     display: none;
   }
+}
+
+.hide-js {
+  display: none;
 }

@@ -1,11 +1,3 @@
-.social {
-
-}
-
-.social__container {
-
-}
-
 .social__list {
   display: flex;
   justify-content: center;
@@ -13,27 +5,35 @@
   border-bottom: 1px solid #e5e5e5;
 
   @media @tablet-widths {
-    padding: 56px 10px;
+    padding: 58px 10px 55px 10px;
+    border: none;
   }
 }
 
 .social__link {
+  position: relative;
+  font-size: 0;
   width: 60px;
   height: 30px;
-  font-size: 0;
-  background-repeat: no-repeat;
-  background-position: 50%;
+}
+
+.social__icon {
+  .svg-styleguide();
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   &--ig {
-    margin-left: -4px;
-    background-image: url(../img/icon-insta.svg);
+    transform: translate(-58%, -47%);
   }
 
   &--fb {
-    background-image: url(../img/icon-fb.svg);
+    transform: translate(-65%, -55%);
   }
 
   &--tw {
-    margin-left: -1px;
-    background-image: url(../img/icon-twitter.svg);
+    transform: translate(-67%, -50%);
   }
 }

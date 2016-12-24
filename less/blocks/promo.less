@@ -1,53 +1,79 @@
 .promo {
   position: relative;
-  top: -56px;
-  z-index: -1;
-  margin-bottom: -56px;
-  background: @bg-color url(../img/hero-mobile@1x.jpg) no-repeat;
-  background-size: cover;
-  border-top: 1px solid #e7e7e7;
+
+  background: #f9f9f9 url('../img/hero-mobile@1x.jpg') no-repeat;
+  background-size: 180%;
+  background-position: 50% 20%;
+
+  @media @retina {
+    background-image: url('../img/hero-mobile@2x.jpg');
+  }
+
+  @media @tablet-widths {
+    top: -56px;
+    z-index: -1;
+    margin-bottom: -56px;
+    background-size: 150%;
+    background-position: 50% -1px;
+    border-top: 1px solid #e7e7e7;
+  }
+
+  @media @desktop-widths {
+    background-image: url('../img/hero-desktop@1x.jpg');
+    background-size: 1150px 746px;
+  }
+
+  @media @desktop-widths and @retina {
+    background-image: url('../img/hero-desktop@2x.jpg');
+  }
 
   &--nobg {
     background-image: none;
-  }
+    padding-top: 20px;
 
-  @media @df-mobile-widths {
-    top: 0;
-    margin-bottom: 0;
-    border-top: none;
+    @media @tablet-widths {
+        background-image: url('../img/bg-zigzag-fill.svg');
+        background-position: -5px bottom;
+        background-size: auto 23px;
+        background-repeat: repeat-x;
+    }
+
+    @media @desktop-widths {
+      background-size: auto 35px;
+    }
   }
 }
 
 .promo__container {
-//  display: flex;
-//
-//  justify-content: center;
-//  align-items: center;
-
-  min-height: 263px;
+  min-height: 282px;
+  padding-top: 70px;
   text-align: center;
 
   @media @tablet-widths {
-    min-height: 626px;
+    min-height: 741px;
+    padding-top: 152px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
   @media @desktop-widths {
-    min-height: 626px;
+    min-height: 741px;
   }
 
-//  @media @df-mobile-widths {
-//    min-height: 263px;
-//  }
-
   &--nobg {
-    min-height: 175px;
+    min-height: 156px;
+    padding-top: 50px;
 
     @media @tablet-widths {
-      min-height: 225px;
+      min-height: 216px;
+      padding-top: 75px;
+      padding-left: 58px;
     }
 
     @media @desktop-widths {
-      min-height: 250px;
+      min-height: 251px;
+      padding-top: 73px;
+      padding-left: 52px;
     }
   }
 }
@@ -55,12 +81,7 @@
 .promo__title {
   .font(27px, 30px, bold, @head-color);
 
-  padding-top: 50px;
-
   @media @tablet-widths {
-    padding-top: 152px;
-    padding-right: 50px;
-    padding-left: 50px;
     font-size: 43px;
     line-height: 50px;
   }
@@ -68,7 +89,12 @@
   @media @desktop-widths {
     font-size: 53px;
     line-height: 57px;
-    padding-right: 200px;
-    padding-left: 200px;
+  }
+
+  &--form {
+    @media @tablet-widths {
+      margin-top: -2px;
+      margin-left: -7px;
+    }
   }
 }
