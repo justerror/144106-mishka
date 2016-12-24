@@ -14,7 +14,8 @@
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-svgmin": "^1.2.3"
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0"
   },
   "scripts": {
     "test": "editorconfig-cli",
