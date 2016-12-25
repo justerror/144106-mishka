@@ -5,12 +5,19 @@
 html {
   min-width: 320px;
   height: 100%;
+
+  @media @desktop-widths {
+    min-width: 1150px;
+  }
 }
 
 body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100%;
   font-family: @body-font;
   color: @base-color;
-  height: 100%;
 }
 
 ul {
