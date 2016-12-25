@@ -23,7 +23,7 @@
     background-size: 1150px 746px;
   }
 
-  @media @desktop-widths and @retina {
+  @media @desktop-widths and (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
     background-image: url('../img/hero-desktop@2x.jpg');
   }
 
@@ -58,6 +58,8 @@
 
   @media @desktop-widths {
     min-height: 741px;
+    padding-right: 225px;
+    padding-left: 225px;
   }
 
   &--nobg {
@@ -73,7 +75,7 @@
     @media @desktop-widths {
       min-height: 251px;
       padding-top: 73px;
-      padding-left: 52px;
+      padding-left: 225px;
     }
   }
 }
