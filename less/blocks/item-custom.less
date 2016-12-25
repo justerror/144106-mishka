@@ -73,7 +73,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  
   width: 100%;
   padding-right: 30px;
   padding-left: 30px;
@@ -300,7 +299,7 @@
 }
 
 .item-custom__input:checked + .item-custom__label--radio:last-child::after {
-  top: 1px;
+  top: -1px;
 }
 
 .item-custom__label--checkbox::before {
@@ -452,6 +451,7 @@
   .container();
 
   flex: 1;
+  flex-basis: 1150px;
 
   padding-right: 30px;
   padding-left: 30px;
